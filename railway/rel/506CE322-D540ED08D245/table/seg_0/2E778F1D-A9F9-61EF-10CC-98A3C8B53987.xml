@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2E778F1D-A9F9-61EF-10CC-98A3C8B53987" name="train">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-08 19:31:47 UTC</createdTime>
+<generatorID>9FEC42BA-08BB-B018-E9E8-B7982F2C0D91</generatorID>
+<ownerDesignName>railway</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="train_id" id="04C145FF-273F-56EF-DA16-4D264C23E56C">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-08 19:31:47 UTC</createdTime>
+<generatorID>EC4A7963-CBB7-AF53-7234-4050BDA94097</generatorID>
+<ownerDesignName>railway</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>09038410-2CDA-7001-14EE-AC96A40A8053</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="3D2A1829-7AFE-EA39-4655-08213CBD8EAA">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-08 19:31:47 UTC</createdTime>
+<generatorID>9244F261-393B-977B-E580-7C879B1A8CA9</generatorID>
+<ownerDesignName>railway</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AC62126F-471C-2766-E614-0E0F67FA0A48</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="11D23B53-1869-2725-A435-5ED1E0ED8301" name="train_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-08 19:31:47 UTC</createdTime>
+<generatorID>325C02C7-1A4D-4F9F-EF5B-381535F011C2</generatorID>
+<ownerDesignName>railway</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04C145FF-273F-56EF-DA16-4D264C23E56C"/>
+<colUsage columnID="3D2A1829-7AFE-EA39-4655-08213CBD8EAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
