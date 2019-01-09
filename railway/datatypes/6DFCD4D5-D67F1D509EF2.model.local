@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<DataTypesDesign class="oracle.dbtools.crest.model.design.datatypes.DataTypesDesign" name="DataTypes" id="6DFCD4D5-DABD-8A8A-CC95-D67F1D509EF2" mainViewID="32F7BD53-D6F3-28A3-FC25-F860067D40E3">
+<DataTypesDesign class="oracle.dbtools.crest.model.design.datatypes.DataTypesDesign" name="DataTypes" id="6DFCD4D5-DABD-8A8A-CC95-D67F1D509EF2">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 18:12:51 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
@@ -32,7 +32,7 @@
 <instantiable>true</instantiable>
 </StructuredType>
 </StructuredTypes>
-<mainView class="oracle.dbtools.crest.swingui.datatypes.DPVDataTypes" id="32F7BD53-D6F3-28A3-FC25-F860067D40E3">
+<mainView class="oracle.dbtools.crest.swingui.datatypes.DPVDataTypes">
 <createdBy>Hubert</createdBy>
 <modifiedBy>Hubert</modifiedBy>
 <createdTime>2019-01-08 18:12:52 UTC</createdTime>

@@ -45,20 +45,6 @@
 <domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="9505CDC4-AAD1-8E14-5E3C-29E9EF36FB7F">
-<createdBy>Hubert</createdBy>
-<createdTime>2019-01-08 19:59:07 UTC</createdTime>
-<generatorID>7973FDC2-99CA-6727-0C5A-5D1BC6FD6F9A</generatorID>
-<ownerDesignName>railway</ownerDesignName>
-<engineerTo>
-<item key="506CE322-9B14-93D3-DA1F-D540ED08D245" value="true"/>
-</engineerTo>
-<referedAttribute>516A18AF-95E4-B51F-4977-F8C1205AD21E</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="47A079AB-2CA3-48E4-D764-1553F58E8A2C" name="carrier PK">
@@ -468,7 +454,7 @@
 <objectViews>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="26A56F69-0334-20CA-D1EB-A7A27C2B60CB" otype="Entity" vid="6351D025-5794-4359-FB5A-64E3C9DCBCCE">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="200" y="378" width="140" height="118"/>
+<bounds x="332" y="364" width="140" height="118"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="435FC804-804C-3C7A-2582-2037B1761028" otype="Entity" vid="4EEA92C8-02CD-21CB-297F-92EB12046C50">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -507,8 +493,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="213" y="378"/>
-<point x="213" y="249"/>
+<point x="341" y="364"/>
+<point x="222" y="249"/>
 </points>
 </Connector>
 </connectors>
