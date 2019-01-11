@@ -65,6 +65,53 @@
 </ind_PK_UK>
 </indexes>
 </Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="663FB397-8ADC-586A-B3DF-19158D762D34" name="city">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>7803BC73-AB43-580A-C688-AAC4EA6EA649</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="5C67A5F2-C5B2-31B7-5881-C4B05272E792">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>9909C233-87FE-B603-4CD6-C2EB469880D4</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="1309A0B0-23E6-5BB6-0AA1-EAF97740A813">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>5AFD3F9C-69B9-82DD-9DB6-A15E55D72175</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8454D646-C679-F527-D344-B9F69E9B6CC6" name="city_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>8FCF51A6-612B-BFD7-7019-EA11CCB46713</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C67A5F2-C5B2-31B7-5881-C4B05272E792"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
 <Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2DCE69F-92F7-F221-9725-DD10518052AD" name="coach">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 19:31:47 UTC</createdTime>
@@ -317,7 +364,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="coach_coach_id" id="C334DCEE-3C6A-8EA4-1D1C-AB7F84DB8E1A">
+<Column name="coach_id" id="C334DCEE-3C6A-8EA4-1D1C-AB7F84DB8E1A">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 19:31:47 UTC</createdTime>
 <generatorID>F211961B-D3A4-FB37-90CC-8C91EF3FF478</generatorID>
@@ -357,7 +404,7 @@
 <colUsage columnID="C334DCEE-3C6A-8EA4-1D1C-AB7F84DB8E1A"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="15832FA9-6B15-8B52-FEA1-6D4565AFED9E" name="coach_types_coach_FK">
+<ind_PK_UK id="15832FA9-6B15-8B52-FEA1-6D4565AFED9E" name="coach_type_coach_FK">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 19:31:47 UTC</createdTime>
 <generatorID>D4CC08F9-77DA-B681-9EF5-BDBBA3AA2B47</generatorID>
@@ -366,6 +413,127 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C334DCEE-3C6A-8EA4-1D1C-AB7F84DB8E1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6F509F1-2F5E-06AF-D80A-97865DADA65B" name="employee">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>8C52DEB7-1BDF-A812-39E8-A2437B77B68A</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B9D6F35F-D728-678E-30F9-4C67611BAED6">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>228A576A-BE5A-1448-D2D8-F46B8B46A985</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_name" id="EEE9D27C-1F70-13BC-3E28-21E54B4C752C">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>16F7F414-244B-C01E-920D-EE187E8871C2</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="A5533EFD-D297-11CC-290B-0CC82AD12CD7">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>C18AA2AA-00CB-15AE-9E93-D11309D314D0</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6BDA37AE-3585-B52F-9EAD-0481A9AAF84A" name="employee_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>99C788B3-8263-A532-1F31-CCFA23179F48</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9D6F35F-D728-678E-30F9-4C67611BAED6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="440A980B-820A-7D10-A457-3174AB3FBD55" name="platform">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>DEFE7C32-B8E0-03F4-607C-F678FB94E6B8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="1590C9EA-6894-2E43-44D6-B2895F1F1B66">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>BD7763B4-88F1-7047-ED0D-E36C5B31F751</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="station_id" id="13D1FC76-1708-3CE3-175D-C47E73019D2F">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>DF8ECB21-0A2C-769B-31B6-D3EF03C5F33B</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B335B485-F605-B153-8148-4308BB359F78" referredColumn="EB809E4D-99E1-3B3B-ABF9-1D2883392B1D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1D760761-0AC3-174B-BB5C-7AE40DB7D2A9" name="platform_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>34CAFD0E-AAEF-BDEF-68BA-49CF6B4C3845</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1590C9EA-6894-2E43-44D6-B2895F1F1B66"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B964A39-E81A-E6C3-B029-DD8399FEAC68" name="platform_station_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>406D3CF8-B916-E7E0-2FC9-2C0D002FBC80</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13D1FC76-1708-3CE3-175D-C47E73019D2F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
@@ -429,6 +597,55 @@
 <colAssociation fkAssociation="2E54BACD-4CDB-1E7E-F628-CDC78B1B69F9" referredColumn="58B00029-2A93-D51B-27F2-FEE0A5E338CA"/>
 </associations>
 </Column>
+<Column name="placement" id="6188AAA5-210D-A32D-CEAB-68F4B6FC56EA">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>7278DEE3-D012-EE68-3D42-567B05F6ACA2</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>3B109FCF-9136-9F98-3E86-DB39E42427B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="is_couchette" id="F8A763D2-C352-8528-7AF8-CB1C8C31910E">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>A3552417-9737-F22C-755E-46D6AAC1B375</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<domain>545610B7-8589-7BDB-EC0A-9D0ED9B6A7C4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="is_beside_table" id="7F1522FA-CA7B-0E05-5628-B1955AB8B574">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>2CE8B669-32EE-003B-899F-9B2E6AF17E62</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<domain>545610B7-8589-7BDB-EC0A-9D0ED9B6A7C4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ticket_id" id="D8BCF091-2D8D-3422-7B4E-7F26BDFDD2DF">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>E1AB5719-3C70-6267-D376-48A744205EE1</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC9509BA-5FCB-AE3A-FD3D-4205D0187613" referredColumn="3F7B2D49-4F1C-1ED1-E14A-616AECE38A2F"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="8B6E5314-7808-FDA3-5408-CC5741B9EDCA" name="seat_PK">
@@ -452,6 +669,225 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="6AB64864-CBAC-ED70-12DE-95452DC66532"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="174FE95E-822A-5631-D967-77FC80723245" name="seat_ticket_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>A540C1C6-39B0-32E7-92B9-AAB83E4EF7E8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D8BCF091-2D8D-3422-7B4E-7F26BDFDD2DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A716FDE6-6231-E6F0-DC64-6B02F39A08BD" name="station">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>EF37F27B-6C41-59B3-167D-445684C68DE8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="EB809E4D-99E1-3B3B-ABF9-1D2883392B1D">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>F005868B-1896-6FAB-227A-12387EC156F1</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="7032934A-AA82-4518-FCCC-ED7A47B34974">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>F2F60229-D15B-F2EE-9069-AF70272E47C7</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="city_id" id="900FAB7F-4E89-4B12-3B32-A400673FCD72">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>DA3384C1-3EA7-A1BF-3F8C-79F1E0690F1B</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD7A7BC0-4AA8-46DC-EED4-60B6ECFB3763" referredColumn="5C67A5F2-C5B2-31B7-5881-C4B05272E792"/>
+</associations>
+</Column>
+<Column name="ticket_id" id="6F9B10BF-89AA-5387-3C43-0EA39789ADCD">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:18:20 UTC</createdTime>
+<generatorID>663CE6F2-E8DC-E187-B0EC-BCB8E6D4F62C</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EBA0E4DB-876F-A74E-5D8F-F40D98475911" referredColumn="3F7B2D49-4F1C-1ED1-E14A-616AECE38A2F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="13AF9E08-3B8D-BFF7-349D-5AC4799F7FDB" name="station_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>59C2B5EF-A9E2-C864-791C-12887FCBE937</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB809E4D-99E1-3B3B-ABF9-1D2883392B1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF98F49B-5249-A56F-7E62-76FF4DEAE140" name="station_city_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>7D7A187F-ECFE-8B14-A7D0-FD471D3B0325</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="900FAB7F-4E89-4B12-3B32-A400673FCD72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05618F27-A6E2-5529-75AC-FEF653FE5EBF" name="station_ticket_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:18:20 UTC</createdTime>
+<generatorID>D8956612-C924-CEA2-6DFF-F6C68DA0D52B</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F9B10BF-89AA-5387-3C43-0EA39789ADCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="687AD6E0-9DBA-246E-259A-07E8CE1AFE83" name="ticket">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>F36C50DA-9532-4E82-B651-03A44F1E11A7</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="3F7B2D49-4F1C-1ED1-E14A-616AECE38A2F">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>37C204B0-4A06-1AA4-85E7-C0E0B7E17555</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departure" id="A7CB138F-5EB0-3092-699A-F22ABED78675">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>52E0E2A1-9C4E-1E72-BFDC-D175E3945C8F</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>08C21536-DD2D-EFF5-6DED-69C092BC6C57</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78DB528C-D763-EE33-965D-2DDDA07AB0F1" name="ticket_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>39CECA42-FFF9-13AC-1094-7705BBF80FB4</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F7B2D49-4F1C-1ED1-E14A-616AECE38A2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0CCC4472-9233-A645-50FF-AE190E73FE50" name="track">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>ECE4F514-6C90-730F-28A6-804E07A77658</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7B40D3E2-6BBB-745C-3B7A-D1C51871AF95">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>218468C6-25BE-2B21-AA96-E12C751BD155</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="platform_id" id="CA245DA2-9BB2-F0AA-A58E-3BE4B4FA61EE">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>7F8C0A4C-B9CD-455B-529A-B7B8C8014BCF</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="56936299-7EF8-08F4-DD42-3C26DD68B5C5" referredColumn="1590C9EA-6894-2E43-44D6-B2895F1F1B66"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="504A3663-FD07-293C-DC09-0B3E1974EF7B" name="track_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>E2104E06-BA6A-9FC5-285F-FB232502DA49</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B40D3E2-6BBB-745C-3B7A-D1C51871AF95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA052D4F-9692-6176-0C27-B6589AED8A8A" name="track_platform_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>C9C9C514-DB06-2CFE-33EE-06623CF7938C</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA245DA2-9BB2-F0AA-A58E-3BE4B4FA61EE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
@@ -541,6 +977,134 @@
 </ind_PK_UK>
 </indexes>
 </Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40C0B59E-763D-8EEA-2E7B-03B1EF396166" name="train_station">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<ordsAlias>relation_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="train_id" id="3E36186D-28F7-9A3D-C7DB-BF569FE2CEB0">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>09038410-2CDA-7001-14EE-AC96A40A8053</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14C0FE19-D1A5-15CC-EC94-C77246E4B282" referredColumn="04C145FF-273F-56EF-DA16-4D264C23E56C"/>
+</associations>
+</Column>
+<Column name="train_name" id="D777E8DA-D7BD-195B-0C25-452CC0B5DEDA">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AC62126F-471C-2766-E614-0E0F67FA0A48</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14C0FE19-D1A5-15CC-EC94-C77246E4B282" referredColumn="3D2A1829-7AFE-EA39-4655-08213CBD8EAA"/>
+</associations>
+</Column>
+<Column name="station_id" id="FFD7AD8F-45C8-18FB-8947-1A3891692050">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1ED2D18-98CF-C4D8-287F-180A888BEEDA" referredColumn="EB809E4D-99E1-3B3B-ABF9-1D2883392B1D"/>
+</associations>
+</Column>
+<Column name="arrival_time" id="87E7F63D-CC75-399B-863E-BBE7A815953A">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:35:38 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>08C21536-DD2D-EFF5-6DED-69C092BC6C57</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="departure_time" id="987DB32B-6A31-7C7E-AA75-5BF264E32AA9">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:35:38 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>08C21536-DD2D-EFF5-6DED-69C092BC6C57</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="day" id="54DBAA0E-0D0A-7684-7CD5-E067C3CD951E">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>4207090A-0702-460B-9AD9-F542CC602837</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>DB542630-790F-05BC-094F-D11E193D2CDD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="131DEACD-5790-303A-2A52-983979C3CE37" name="Relation_12_PK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E36186D-28F7-9A3D-C7DB-BF569FE2CEB0"/>
+<colUsage columnID="D777E8DA-D7BD-195B-0C25-452CC0B5DEDA"/>
+<colUsage columnID="FFD7AD8F-45C8-18FB-8947-1A3891692050"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C90CABDB-8451-3EC4-02D9-B58A1D543BC6" name="Relation_12_train_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<generatorID>103D7606-FCD4-9B1A-EDF7-03AB109D53D8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E36186D-28F7-9A3D-C7DB-BF569FE2CEB0"/>
+<colUsage columnID="D777E8DA-D7BD-195B-0C25-452CC0B5DEDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D2C1E5E2-75D2-2C40-2186-A41C3390A04B" name="Relation_12_station_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<generatorID>103D7606-FCD4-9B1A-EDF7-03AB109D53D8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFD7AD8F-45C8-18FB-8947-1A3891692050"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
 </Tables>
 <ForeignKeys>
 <ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="24B8A5A1-ED93-6748-0107-E29270DB5256" containerWithKeyObject="B2DCE69F-92F7-F221-9725-DD10518052AD" localFKIndex="1A48028B-90A8-AC1D-14AE-E13484737E1B" name="coach_coach_type_FK">
@@ -575,7 +1139,7 @@
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
 </ForeignKey>
-<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="74FD37B3-5263-7EDB-CE35-976C7351B01C" containerWithKeyObject="8A9F6EC1-D104-6968-F6AC-C479B1687811" localFKIndex="15832FA9-6B15-8B52-FEA1-6D4565AFED9E" name="coach_types_coach_FK">
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="74FD37B3-5263-7EDB-CE35-976C7351B01C" containerWithKeyObject="8A9F6EC1-D104-6968-F6AC-C479B1687811" localFKIndex="15832FA9-6B15-8B52-FEA1-6D4565AFED9E" name="coach_type_coach_FK">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 19:31:47 UTC</createdTime>
 <generatorID>D4CC08F9-77DA-B681-9EF5-BDBBA3AA2B47</generatorID>
@@ -591,6 +1155,54 @@
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
 </ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B335B485-F605-B153-8148-4308BB359F78" containerWithKeyObject="440A980B-820A-7D10-A457-3174AB3FBD55" localFKIndex="2B964A39-E81A-E6C3-B029-DD8399FEAC68" name="platform_station_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>406D3CF8-B916-E7E0-2FC9-2C0D002FBC80</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<referredTableLongName>station</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A716FDE6-6231-E6F0-DC64-6B02F39A08BD</referredTableID>
+<keyObject>13AF9E08-3B8D-BFF7-349D-5AC4799F7FDB</keyObject>
+<referredKeyID>13AF9E08-3B8D-BFF7-349D-5AC4799F7FDB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D1ED2D18-98CF-C4D8-287F-180A888BEEDA" containerWithKeyObject="40C0B59E-763D-8EEA-2E7B-03B1EF396166" localFKIndex="D2C1E5E2-75D2-2C40-2186-A41C3390A04B" name="Relation_12_station_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<generatorID>103D7606-FCD4-9B1A-EDF7-03AB109D53D8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<referredTableLongName>station</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A716FDE6-6231-E6F0-DC64-6B02F39A08BD</referredTableID>
+<keyObject>13AF9E08-3B8D-BFF7-349D-5AC4799F7FDB</keyObject>
+<referredKeyID>13AF9E08-3B8D-BFF7-349D-5AC4799F7FDB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="14C0FE19-D1A5-15CC-EC94-C77246E4B282" containerWithKeyObject="40C0B59E-763D-8EEA-2E7B-03B1EF396166" localFKIndex="C90CABDB-8451-3EC4-02D9-B58A1D543BC6" name="Relation_12_train_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:34:17 UTC</createdTime>
+<generatorID>103D7606-FCD4-9B1A-EDF7-03AB109D53D8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<referredTableLongName>train</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2E778F1D-A9F9-61EF-10CC-98A3C8B53987</referredTableID>
+<keyObject>11D23B53-1869-2725-A435-5ED1E0ED8301</keyObject>
+<referredKeyID>11D23B53-1869-2725-A435-5ED1E0ED8301</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id,name</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
 <ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2E54BACD-4CDB-1E7E-F628-CDC78B1B69F9" containerWithKeyObject="8D0CEE49-400D-8020-F359-41412C41EE3A" localFKIndex="CD050071-F503-5DAD-6DFB-748DE9989D18" name="seat_coach_FK">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 22:36:06 UTC</createdTime>
@@ -601,6 +1213,70 @@
 <referredTableID>B2DCE69F-92F7-F221-9725-DD10518052AD</referredTableID>
 <keyObject>E90563D5-7041-66D2-E342-5E74375F3AFF</keyObject>
 <referredKeyID>E90563D5-7041-66D2-E342-5E74375F3AFF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DC9509BA-5FCB-AE3A-FD3D-4205D0187613" containerWithKeyObject="8D0CEE49-400D-8020-F359-41412C41EE3A" localFKIndex="174FE95E-822A-5631-D967-77FC80723245" name="seat_ticket_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:13:18 UTC</createdTime>
+<generatorID>A540C1C6-39B0-32E7-92B9-AAB83E4EF7E8</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<referredTableLongName>ticket</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>687AD6E0-9DBA-246E-259A-07E8CE1AFE83</referredTableID>
+<keyObject>78DB528C-D763-EE33-965D-2DDDA07AB0F1</keyObject>
+<referredKeyID>78DB528C-D763-EE33-965D-2DDDA07AB0F1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FD7A7BC0-4AA8-46DC-EED4-60B6ECFB3763" containerWithKeyObject="A716FDE6-6231-E6F0-DC64-6B02F39A08BD" localFKIndex="DF98F49B-5249-A56F-7E62-76FF4DEAE140" name="station_city_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>7D7A187F-ECFE-8B14-A7D0-FD471D3B0325</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<referredTableLongName>city</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>663FB397-8ADC-586A-B3DF-19158D762D34</referredTableID>
+<keyObject>8454D646-C679-F527-D344-B9F69E9B6CC6</keyObject>
+<referredKeyID>8454D646-C679-F527-D344-B9F69E9B6CC6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EBA0E4DB-876F-A74E-5D8F-F40D98475911" containerWithKeyObject="A716FDE6-6231-E6F0-DC64-6B02F39A08BD" localFKIndex="05618F27-A6E2-5529-75AC-FEF653FE5EBF" name="station_ticket_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 15:18:20 UTC</createdTime>
+<generatorID>D8956612-C924-CEA2-6DFF-F6C68DA0D52B</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<referredTableLongName>ticket</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>687AD6E0-9DBA-246E-259A-07E8CE1AFE83</referredTableID>
+<keyObject>78DB528C-D763-EE33-965D-2DDDA07AB0F1</keyObject>
+<referredKeyID>78DB528C-D763-EE33-965D-2DDDA07AB0F1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="56936299-7EF8-08F4-DD42-3C26DD68B5C5" containerWithKeyObject="0CCC4472-9233-A645-50FF-AE190E73FE50" localFKIndex="FA052D4F-9692-6176-0C27-B6589AED8A8A" name="track_platform_FK">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:23:43 UTC</createdTime>
+<generatorID>C9C9C514-DB06-2CFE-33EE-06623CF7938C</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<referredTableLongName>platform</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>440A980B-820A-7D10-A457-3174AB3FBD55</referredTableID>
+<keyObject>1D760761-0AC3-174B-BB5C-7AE40DB7D2A9</keyObject>
+<referredKeyID>1D760761-0AC3-174B-BB5C-7AE40DB7D2A9</referredKeyID>
 <mandatory>true</mandatory>
 <refColNames>id</refColNames>
 <transferable>true</transferable>
@@ -639,35 +1315,72 @@
 <display>false</display>
 <notation>1</notation>
 <objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="0CCC4472-9233-A645-50FF-AE190E73FE50" otype="Table" vid="B2085F49-A894-8693-6805-99C687246763">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="1239" y="180" width="138" height="111"/>
+</OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="2E778F1D-A9F9-61EF-10CC-98A3C8B53987" otype="Table" vid="40C17D4A-2D4D-985B-6C26-41607D721E4D">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="52" y="87" width="175" height="162"/>
+<bounds x="186" y="74" width="175" height="162"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="40C0B59E-763D-8EEA-2E7B-03B1EF396166" otype="Table" vid="59A346F0-ECBA-3B99-9C2E-064A85FC5FA6">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="328" y="311" width="313" height="201"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="440A980B-820A-7D10-A457-3174AB3FBD55" otype="Table" vid="079653D8-5BA0-C58C-CA15-F0E9CDD1E79E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="1256" y="549" width="123" height="90"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="560DC993-AA20-2EB2-82DB-CAD6B53FC238" otype="Table" vid="36FC48E8-34BD-EF07-5310-8008B3CD960F">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="54" y="298" width="140" height="118"/>
+<bounds x="79" y="330" width="140" height="118"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="663FB397-8ADC-586A-B3DF-19158D762D34" otype="Table" vid="E3174F67-4A7C-C7E1-7209-11964C38E2A4">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="1116" y="441" width="128" height="119"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="687AD6E0-9DBA-246E-259A-07E8CE1AFE83" otype="Table" vid="AF595696-A86B-30EF-E00E-6BDBBEAF45F2">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="711" y="508" width="141" height="92"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="8A9F6EC1-D104-6968-F6AC-C479B1687811" otype="Table" vid="7A00AE69-8E8C-393C-AFFE-7E3B01E4BB7E">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="698" y="80" width="207" height="152"/>
+<bounds x="920" y="83" width="207" height="152"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="8D0CEE49-400D-8020-F359-41412C41EE3A" otype="Table" vid="EA9F0DA6-D0EA-7AB8-AA61-C1A2B0BBBDD1">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="460" y="412" width="206" height="138"/>
+<bounds x="658" y="296" width="206" height="154"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="A716FDE6-6231-E6F0-DC64-6B02F39A08BD" otype="Table" vid="C9213D89-E219-A629-07DE-015212AB9637">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="263" y="527" width="161" height="130"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="B2DCE69F-92F7-F221-9725-DD10518052AD" otype="Table" vid="0787A979-07E4-52C8-0382-ECBB47D33532">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="287" y="78" width="282" height="288"/>
+<bounds x="435" y="28" width="282" height="244"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="F6F509F1-2F5E-06AF-D80A-97865DADA65B" otype="Table" vid="3C59ED5C-EF4A-27BB-3075-85105EF03EA3">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="1227" y="31" width="147" height="95"/>
 </OView>
 </objectViews>
 <connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="14C0FE19-D1A5-15CC-EC94-C77246E4B282" otype="FKIndexAssociation" vid_source="40C17D4A-2D4D-985B-6C26-41607D721E4D" vid_target="59A346F0-ECBA-3B99-9C2E-064A85FC5FA6">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="344" y="236"/>
+<point x="344" y="311"/>
+</points>
+</Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="1653F177-37C3-F504-2636-CB9982011DA2" otype="FKIndexAssociation" vid_source="36FC48E8-34BD-EF07-5310-8008B3CD960F" vid_target="40C17D4A-2D4D-985B-6C26-41607D721E4D">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="124" y="298"/>
-<point x="124" y="249"/>
+<point x="202" y="330"/>
+<point x="202" y="236"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="24B8A5A1-ED93-6748-0107-E29270DB5256" otype="FKIndexAssociation" vid_source="7A00AE69-8E8C-393C-AFFE-7E3B01E4BB7E" vid_target="0787A979-07E4-52C8-0382-ECBB47D33532">
@@ -675,8 +1388,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="698" y="186"/>
-<point x="569" y="186"/>
+<point x="920" y="159"/>
+<point x="717" y="159"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="2E54BACD-4CDB-1E7E-F628-CDC78B1B69F9" otype="FKIndexAssociation" vid_source="0787A979-07E4-52C8-0382-ECBB47D33532" vid_target="EA9F0DA6-D0EA-7AB8-AA61-C1A2B0BBBDD1">
@@ -684,8 +1397,17 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="514" y="366"/>
-<point x="514" y="412"/>
+<point x="687" y="272"/>
+<point x="687" y="296"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="56936299-7EF8-08F4-DD42-3C26DD68B5C5" otype="FKIndexAssociation" vid_source="079653D8-5BA0-C58C-CA15-F0E9CDD1E79E" vid_target="B2085F49-A894-8693-6805-99C687246763">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="1316" y="549"/>
+<point x="1316" y="291"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="74FD37B3-5263-7EDB-CE35-976C7351B01C" otype="FKIndexAssociation" vid_source="0787A979-07E4-52C8-0382-ECBB47D33532" vid_target="7A00AE69-8E8C-393C-AFFE-7E3B01E4BB7E">
@@ -693,8 +1415,44 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="569" y="156"/>
-<point x="698" y="156"/>
+<point x="717" y="174"/>
+<point x="920" y="174"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="B335B485-F605-B153-8148-4308BB359F78" otype="FKIndexAssociation" vid_source="C9213D89-E219-A629-07DE-015212AB9637" vid_target="079653D8-5BA0-C58C-CA15-F0E9CDD1E79E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="424" y="609"/>
+<point x="1256" y="609"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="D1ED2D18-98CF-C4D8-287F-180A888BEEDA" otype="FKIndexAssociation" vid_source="C9213D89-E219-A629-07DE-015212AB9637" vid_target="59A346F0-ECBA-3B99-9C2E-064A85FC5FA6">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="376" y="527"/>
+<point x="376" y="512"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="DC9509BA-5FCB-AE3A-FD3D-4205D0187613" otype="FKIndexAssociation" vid_source="AF595696-A86B-30EF-E00E-6BDBBEAF45F2" vid_target="EA9F0DA6-D0EA-7AB8-AA61-C1A2B0BBBDD1">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="781" y="508"/>
+<point x="781" y="450"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="EBA0E4DB-876F-A74E-5D8F-F40D98475911" otype="FKIndexAssociation" vid_source="AF595696-A86B-30EF-E00E-6BDBBEAF45F2" vid_target="C9213D89-E219-A629-07DE-015212AB9637">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="711" y="563"/>
+<point x="424" y="563"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="ECC7DF7B-11CC-CB19-D979-0F0528C2445F" otype="FKIndexAssociation" vid_source="40C17D4A-2D4D-985B-6C26-41607D721E4D" vid_target="0787A979-07E4-52C8-0382-ECBB47D33532">
@@ -702,8 +1460,17 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="227" y="168"/>
-<point x="287" y="168"/>
+<point x="361" y="155"/>
+<point x="435" y="155"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="FD7A7BC0-4AA8-46DC-EED4-60B6ECFB3763" otype="FKIndexAssociation" vid_source="E3174F67-4A7C-C7E1-7209-11964C38E2A4" vid_target="C9213D89-E219-A629-07DE-015212AB9637">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="1116" y="543"/>
+<point x="424" y="543"/>
 </points>
 </Connector>
 </connectors>
