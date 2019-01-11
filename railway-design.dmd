@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="railway-design" id="A4FA8EBB-4C18-9FBE-ACF9-83DAC6775845" version="3.5">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-08 18:12:51 UTC</createdTime>
+<ownerDesignName>railway</ownerDesignName>
+<modelPersistence>2</modelPersistence>
+<capitalNames>false</capitalNames>
+<designId>A4FA8EBB-4C18-9FBE-ACF9-83DAC6775845</designId>
+</OSDM_Design>
