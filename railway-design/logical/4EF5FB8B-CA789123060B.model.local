@@ -531,7 +531,7 @@
 <domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="F8DEC804-91FB-4F69-7306-25550F686B46">
+<Attribute name="train id" id="F8DEC804-91FB-4F69-7306-25550F686B46">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 15:57:43 UTC</createdTime>
 <generatorID>D6E95D68-0436-F705-2B02-57C48EB66253</generatorID>
@@ -545,7 +545,7 @@
 <domain>09038410-2CDA-7001-14EE-AC96A40A8053</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="name" id="EE1A473B-6F06-DC99-C325-FBE1FB3C454E">
+<Attribute name="train name" id="EE1A473B-6F06-DC99-C325-FBE1FB3C454E">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 15:57:43 UTC</createdTime>
 <generatorID>D6E95D68-0436-F705-2B02-57C48EB66253</generatorID>
@@ -1185,7 +1185,7 @@
 <domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="arrival station id1" id="3319CB90-3235-8E6D-3E54-27C4DFE2953A">
+<Attribute name="departure station id1" id="3319CB90-3235-8E6D-3E54-27C4DFE2953A">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 15:00:51 UTC</createdTime>
 <generatorID>BF628967-7618-2454-DEA9-E93F2E6F5C5F</generatorID>
@@ -1199,7 +1199,7 @@
 <domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="departure station id" id="8F40D607-7F76-CFE1-1785-1D4E5439BBE7">
+<Attribute name="arrival station id" id="8F40D607-7F76-CFE1-1785-1D4E5439BBE7">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 15:01:27 UTC</createdTime>
 <generatorID>F868D344-D22D-5173-B9D2-95E22AD18496</generatorID>
@@ -1616,25 +1616,7 @@
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relationship>
-<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="platform station FK" directorySegmentName="seg_0" id="406D3CF8-B916-E7E0-2FC9-2C0D002FBC80">
-<createdBy>Hubert</createdBy>
-<createdTime>2019-01-11 14:21:36 UTC</createdTime>
-<ownerDesignName>railway</ownerDesignName>
-<engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
-</engineerTo>
-<sourcePk>59C2B5EF-A9E2-C864-791C-12887FCBE937</sourcePk>
-<identifying>false</identifying>
-<optionalSource>true</optionalSource>
-<optionalTarget>false</optionalTarget>
-<sourceCardinality>1</sourceCardinality>
-<sourceEntity>EF37F27B-6C41-59B3-167D-445684C68DE8</sourceEntity>
-<targetCardinalityString>*</targetCardinalityString>
-<targetEntity>DEFE7C32-B8E0-03F4-607C-F678FB94E6B8</targetEntity>
-<transferable>true</transferable>
-<deleteRule>NO ACTION</deleteRule>
-</Relationship>
-<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_24" directorySegmentName="seg_0" id="D6E95D68-0436-F705-2B02-57C48EB66253">
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="employee train FK" directorySegmentName="seg_0" id="D6E95D68-0436-F705-2B02-57C48EB66253">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 15:57:43 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
@@ -1650,6 +1632,24 @@
 <sourceEntity>9FEC42BA-08BB-B018-E9E8-B7982F2C0D91</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>8C52DEB7-1BDF-A812-39E8-A2437B77B68A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relationship>
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="platform station FK" directorySegmentName="seg_0" id="406D3CF8-B916-E7E0-2FC9-2C0D002FBC80">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-11 14:21:36 UTC</createdTime>
+<ownerDesignName>railway</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<sourcePk>59C2B5EF-A9E2-C864-791C-12887FCBE937</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EF37F27B-6C41-59B3-167D-445684C68DE8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DEFE7C32-B8E0-03F4-607C-F678FB94E6B8</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relationship>
@@ -1765,7 +1765,7 @@
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relationship>
-<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="ticket station FKv2" directorySegmentName="seg_0" id="BF628967-7618-2454-DEA9-E93F2E6F5C5F">
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="ticket station FKv1" directorySegmentName="seg_0" id="BF628967-7618-2454-DEA9-E93F2E6F5C5F">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 15:00:51 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
@@ -1899,6 +1899,316 @@
 <deleteRule>NO ACTION</deleteRule>
 </Relationship>
 </Relationships>
+<EntityViews>
+<EntityView class="oracle.dbtools.crest.model.design.logical.EntityView" directorySegmentName="seg_0" id="08EB3D29-6A29-F9BB-A806-A2E41D007E99" name="timetable">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>488A33A8-E38E-31EC-7353-043E96B3F1B4</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT&lt;br/&gt;    city.id,&lt;br/&gt;    city.name,&lt;br/&gt;    station.id     AS station_id,&lt;br/&gt;    station.name   AS station_name,&lt;br/&gt;    train.id       AS train_id,&lt;br/&gt;    train.name     AS train_name,&lt;br/&gt;    carrier.id     AS carrier_id,&lt;br/&gt;    carrier.name   AS carrier_name,&lt;br/&gt;    train_station.departure_time,&lt;br/&gt;    train_station.arrival_time,&lt;br/&gt;    platform.id    AS platform,&lt;br/&gt;    track.id       AS track&lt;br/&gt;FROM&lt;br/&gt;    train&lt;br/&gt;    INNER JOIN train_station ON train.id = train_station.train_id&lt;br/&gt;                                AND train.name = train_station.train_name&lt;br/&gt;    INNER JOIN station ON station.id = train_station.station_id&lt;br/&gt;    INNER JOIN city ON city.id = station.city_id&lt;br/&gt;    INNER JOIN carrier ON carrier.id = train.carrier_id&lt;br/&gt;    INNER JOIN platform ON station.id = platform.station_id&lt;br/&gt;    INNER JOIN track ON platform.id = track.platform_id</userDefinedSQL>
+<validSQL>false</validSQL>
+<parsed>true</parsed>
+<incorrectSQL>true</incorrectSQL>
+<viewType>EntityView</viewType>
+<usedContainers>
+<container containerID="ECE4F514-6C90-730F-28A6-804E07A77658"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="id" id="CC83B115-91C9-93CD-4F11-B068535D44C1">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>36F3D18F-9096-8CCB-6B18-02C99490E2CE</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<reference>false</reference>
+<referencedColumn>9909C233-87FE-B603-4CD6-C2EB469880D4</referencedColumn>
+<table>7803BC73-AB43-580A-C688-AAC4EA6EA649</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="name" id="A42F4112-8306-E3A2-445D-A25B03432C29">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>6B5FCA05-B521-0259-E916-B387FC68F516</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NVARCHAR2 (256)</dataType>
+<reference>false</reference>
+<referencedColumn>5AFD3F9C-69B9-82DD-9DB6-A15E55D72175</referencedColumn>
+<table>7803BC73-AB43-580A-C688-AAC4EA6EA649</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="station_id" id="CA745092-A385-2225-9A42-9FEE0EA91575">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>E19B837A-9F12-AC2F-2849-3A667C20D1FD</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>station_id</alias>
+<dataType>INTEGER</dataType>
+<reference>false</reference>
+<referencedColumn>F005868B-1896-6FAB-227A-12387EC156F1</referencedColumn>
+<table>EF37F27B-6C41-59B3-167D-445684C68DE8</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="station_name" id="05FF640F-BF9A-A3F7-1403-BC15A234DB1F">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>16C6ED86-2D8E-E26A-F539-3C461C5C6E0E</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>station_name</alias>
+<dataType>NVARCHAR2 (256)</dataType>
+<reference>false</reference>
+<referencedColumn>F2F60229-D15B-F2EE-9069-AF70272E47C7</referencedColumn>
+<table>EF37F27B-6C41-59B3-167D-445684C68DE8</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="train_id" id="D66EA28E-382E-788C-1CD3-FB9283F88B06">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>AF574F1D-3A7A-8252-FFE1-C8E4C9337F2D</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>train_id</alias>
+<dataType>VARCHAR2 (16 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>EC4A7963-CBB7-AF53-7234-4050BDA94097</referencedColumn>
+<table>9FEC42BA-08BB-B018-E9E8-B7982F2C0D91</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="train_name" id="7CFB000D-3B7E-4DE6-F963-DF3C17225850">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>9C1E8E5E-E934-C46E-CD17-94F7F6454ED2</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>train_name</alias>
+<dataType>VARCHAR2 (256 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>9244F261-393B-977B-E580-7C879B1A8CA9</referencedColumn>
+<table>9FEC42BA-08BB-B018-E9E8-B7982F2C0D91</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="carrier_id" id="FE5039A0-BA9A-A6F8-C430-B13D1CAB03F7">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>C56BEE91-00EC-9217-CCB9-0D0FC1CCA4EB</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>carrier_id</alias>
+<dataType>INTEGER</dataType>
+<reference>false</reference>
+<referencedColumn>516A18AF-95E4-B51F-4977-F8C1205AD21E</referencedColumn>
+<table>26A56F69-0334-20CA-D1EB-A7A27C2B60CB</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="carrier_name" id="3080C3C9-5BB6-B556-8583-FF728B061B9B">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>694F4FC7-5CB4-DD51-DF4D-82851AF6BE1E</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>carrier_name</alias>
+<dataType>NVARCHAR2 (256)</dataType>
+<reference>false</reference>
+<referencedColumn>FB74E1E9-A9DB-437A-BBE4-3246E806D8F8</referencedColumn>
+<table>26A56F69-0334-20CA-D1EB-A7A27C2B60CB</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="departure_time" id="689F23C1-3A95-050E-ADB3-1D265C3BE35C">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>50B7AF4A-2E9E-4924-349C-91D0E75C6C9B</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>DATE</dataType>
+<reference>false</reference>
+<referencedColumn>FB7E5321-06B3-17A9-75C6-7D74844E4424</referencedColumn>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="arrival_time" id="78F1DE01-861E-49B9-3428-35A7C268C8CC">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>84CFBE80-D56F-22D8-F024-8EF6F9086415</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>DATE</dataType>
+<reference>false</reference>
+<referencedColumn>781A5AFE-881B-1633-2415-F8B63383781F</referencedColumn>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="platform" id="BBF2F7C2-9456-7665-A8B2-99D517C3D784">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>3BAE2B2B-894C-A48A-E2D1-42B58204869A</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>platform</alias>
+<dataType>INTEGER</dataType>
+<reference>false</reference>
+<referencedColumn>BD7763B4-88F1-7047-ED0D-E36C5B31F751</referencedColumn>
+<table>DEFE7C32-B8E0-03F4-607C-F678FB94E6B8</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.logical.AttributeView" name="track" id="D1A18D00-298A-586A-50E7-E30F02403F6B">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 16:24:08 UTC</createdTime>
+<generatorID>480B875A-775A-D17E-89CF-64FA3E5E4126</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>track</alias>
+<dataType>INTEGER</dataType>
+<reference>false</reference>
+<referencedColumn>218468C6-25BE-2B21-AA96-E12C751BD155</referencedColumn>
+<table>ECE4F514-6C90-730F-28A6-804E07A77658</table>
+<viewID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</viewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7803BC73-AB43-580A-C688-AAC4EA6EA649">
+<container>true</container>
+<tableName>city</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EF37F27B-6C41-59B3-167D-445684C68DE8">
+<container>true</container>
+<tableName>station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9FEC42BA-08BB-B018-E9E8-B7982F2C0D91">
+<container>true</container>
+<tableName>train</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="26A56F69-0334-20CA-D1EB-A7A27C2B60CB">
+<container>true</container>
+<tableName>carrier</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DEFE7C32-B8E0-03F4-607C-F678FB94E6B8">
+<container>true</container>
+<tableName>platform</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="ECE4F514-6C90-730F-28A6-804E07A77658">
+<container>true</container>
+<tableName>track</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9909C233-87FE-B603-4CD6-C2EB469880D4">
+<columnName>id</columnName>
+<tableName>city</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5AFD3F9C-69B9-82DD-9DB6-A15E55D72175">
+<columnName>name</columnName>
+<tableName>city</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F005868B-1896-6FAB-227A-12387EC156F1">
+<columnName>id</columnName>
+<tableName>station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F2F60229-D15B-F2EE-9069-AF70272E47C7">
+<columnName>name</columnName>
+<tableName>station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EC4A7963-CBB7-AF53-7234-4050BDA94097">
+<columnName>id</columnName>
+<tableName>train</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9244F261-393B-977B-E580-7C879B1A8CA9">
+<columnName>name</columnName>
+<tableName>train</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="516A18AF-95E4-B51F-4977-F8C1205AD21E">
+<columnName>id</columnName>
+<tableName>carrier</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FB74E1E9-A9DB-437A-BBE4-3246E806D8F8">
+<columnName>name</columnName>
+<tableName>carrier</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FB7E5321-06B3-17A9-75C6-7D74844E4424">
+<columnName>departure_time</columnName>
+<tableName>train_station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="781A5AFE-881B-1633-2415-F8B63383781F">
+<columnName>arrival_time</columnName>
+<tableName>train_station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BD7763B4-88F1-7047-ED0D-E36C5B31F751">
+<columnName>id</columnName>
+<tableName>platform</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="218468C6-25BE-2B21-AA96-E12C751BD155">
+<columnName>id</columnName>
+<tableName>track</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DA3384C1-3EA7-A1BF-3F8C-79F1E0690F1B">
+<columnName>city_id</columnName>
+<tableName>station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EB79CBA6-654C-CD45-742A-B60C69D55DE8">
+<columnName>carrier_id</columnName>
+<tableName>train</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DF8ECB21-0A2C-769B-31B6-D3EF03C5F33B">
+<columnName>station_id</columnName>
+<tableName>platform</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7F8C0A4C-B9CD-455B-529A-B7B8C8014BCF">
+<columnName>platform_id</columnName>
+<tableName>track</tableName>
+</UsedObject>
+</usedObjects>
+</EntityView>
+</EntityViews>
 <mainView class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="E116054E-1F6F-D43B-4519-0EF9CB55C8D0">
 <createdBy>Hubert</createdBy>
 <modifiedBy>Hubert</modifiedBy>
@@ -1914,6 +2224,10 @@
 <display>false</display>
 <notation>0</notation>
 <objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntityView" oid="08EB3D29-6A29-F9BB-A806-A2E41D007E99" otype="EntityView" vid="4FD8E7FE-CC13-B57D-5783-B0D7C1E02E5E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="937" y="274" width="322" height="177"/>
+</OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="0D186BA3-C4E7-08B6-AB88-E67A867C32AF" otype="Entity" vid="0D77496D-33C2-3AC2-5F47-8E55C3ECE2C2">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <bounds x="1361" y="350" width="257" height="226"/>
@@ -1924,7 +2238,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="26A56F69-0334-20CA-D1EB-A7A27C2B60CB" otype="Entity" vid="6351D025-5794-4359-FB5A-64E3C9DCBCCE">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="42" y="335" width="140" height="118"/>
+<bounds x="12" y="265" width="140" height="118"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="435FC804-804C-3C7A-2582-2037B1761028" otype="Entity" vid="4EEA92C8-02CD-21CB-297F-92EB12046C50">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -1944,11 +2258,11 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="8C52DEB7-1BDF-A812-39E8-A2437B77B68A" otype="Entity" vid="9D7D801F-6845-117A-A9EA-94EED5B9191D">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="1101" y="170" width="189" height="200"/>
+<bounds x="1101" y="22" width="189" height="236"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="9FEC42BA-08BB-B018-E9E8-B7982F2C0D91" otype="Entity" vid="B78B1F22-A7D1-6694-87C5-C4F4EB544294">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="30" y="18" width="229" height="162"/>
+<bounds x="32" y="44" width="229" height="162"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="D1C79D8B-630B-69CE-7B2C-7B28B6E08467" otype="Entity" vid="841EF7A8-9932-8F35-56BF-BBAF4E0C12E3">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -1964,11 +2278,11 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="EF37F27B-6C41-59B3-167D-445684C68DE8" otype="Entity" vid="C9DE1E3D-2766-2E54-E271-DB79C81E96CE">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="126" y="645" width="183" height="143"/>
+<bounds x="21" y="616" width="183" height="143"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="F36C50DA-9532-4E82-B651-03A44F1E11A7" otype="Entity" vid="38EB57A2-5E3C-84BA-AA32-9A1E4D4214D3">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="293" y="308" width="210" height="216"/>
+<bounds x="283" y="322" width="210" height="256"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="F493779F-2567-2457-B28A-2286451A0D1F" otype="Entity" vid="D58CE7D9-A037-9541-638F-04EB81DEA937">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -1994,8 +2308,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="214" y="180"/>
-<point x="214" y="645"/>
+<point x="118" y="206"/>
+<point x="118" y="616"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="278DEAEF-8767-AEC4-ED16-55CDC25C83BD" otype="Relation" vid_source="CBAA53F6-60BD-B0A9-9B17-F1C956EFFD6A" vid_target="38EB57A2-5E3C-84BA-AA32-9A1E4D4214D3">
@@ -2003,8 +2317,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="666" y="454"/>
-<point x="503" y="454"/>
+<point x="666" y="427"/>
+<point x="493" y="427"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="406D3CF8-B916-E7E0-2FC9-2C0D002FBC80" otype="Relation" vid_source="C9DE1E3D-2766-2E54-E271-DB79C81E96CE" vid_target="203E7F44-C4A6-4024-1284-AAED2F4D0CCE">
@@ -2012,8 +2326,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="309" y="757"/>
-<point x="498" y="757"/>
+<point x="204" y="727"/>
+<point x="498" y="727"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="7D7A187F-ECFE-8B14-A7D0-FD471D3B0325" otype="Relation" vid_source="25DE046F-65D4-0B5E-5693-B428D111D8BE" vid_target="C9DE1E3D-2766-2E54-E271-DB79C81E96CE">
@@ -2021,8 +2335,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="551" y="664"/>
-<point x="309" y="664"/>
+<point x="551" y="634"/>
+<point x="204" y="634"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="97F0401D-38CE-CEC0-D065-A4523C5AE871" otype="Relation" vid_source="D58CE7D9-A037-9541-638F-04EB81DEA937" vid_target="841EF7A8-9932-8F35-56BF-BBAF4E0C12E3">
@@ -2039,8 +2353,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="1250" y="484"/>
-<point x="1250" y="370"/>
+<point x="1190" y="484"/>
+<point x="1190" y="258"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="BCFCB42D-F0FC-21D1-ACAB-2EC6276A176E" otype="Relation" vid_source="4EEA92C8-02CD-21CB-297F-92EB12046C50" vid_target="19AAE457-3A17-B896-63AD-C9CC87D65E40">
@@ -2057,8 +2371,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="301" y="645"/>
-<point x="301" y="524"/>
+<point x="195" y="616"/>
+<point x="283" y="540"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="C233E256-1211-0B6D-861F-451FC9DAEC71" otype="Relation" vid_source="20C74767-619E-4852-72D7-C9CF84B5098A" vid_target="9D7D801F-6845-117A-A9EA-94EED5B9191D">
@@ -2066,8 +2380,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="1320" y="219"/>
-<point x="1290" y="219"/>
+<point x="1320" y="149"/>
+<point x="1290" y="149"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="C9C9C514-DB06-2CFE-33EE-06623CF7938C" otype="Relation" vid_source="203E7F44-C4A6-4024-1284-AAED2F4D0CCE" vid_target="1F097337-9989-905D-144E-0FF7B8F3D45C">
@@ -2084,8 +2398,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="259" y="175"/>
-<point x="1101" y="175"/>
+<point x="261" y="140"/>
+<point x="1101" y="140"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="DA33363F-BA1E-749C-9399-B0B3AE0EB29B" otype="Relation" vid_source="19AAE457-3A17-B896-63AD-C9CC87D65E40" vid_target="CBAA53F6-60BD-B0A9-9B17-F1C956EFFD6A">
@@ -2102,8 +2416,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="259" y="99"/>
-<point x="520" y="99"/>
+<point x="261" y="125"/>
+<point x="520" y="125"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="F3591022-0C79-9F93-3548-8007C167D538" otype="Relation" vid_source="9D7D801F-6845-117A-A9EA-94EED5B9191D" vid_target="9D7D801F-6845-117A-A9EA-94EED5B9191D">
@@ -2111,11 +2425,11 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="1290" y="287"/>
-<point x="1315" y="287"/>
-<point x="1315" y="395"/>
-<point x="1212" y="395"/>
-<point x="1212" y="370"/>
+<point x="1290" y="160"/>
+<point x="1365" y="160"/>
+<point x="1365" y="333"/>
+<point x="1212" y="333"/>
+<point x="1212" y="258"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="F4F98C56-E1FF-5775-1CB8-52EB6A7A9D56" otype="Relation" vid_source="6BE7D52A-4B72-4700-6C65-0A14501739BA" vid_target="38EB57A2-5E3C-84BA-AA32-9A1E4D4214D3">
@@ -2123,8 +2437,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="393" y="280"/>
-<point x="393" y="308"/>
+<point x="392" y="280"/>
+<point x="392" y="322"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="F868D344-D22D-5173-B9D2-95E22AD18496" otype="Relation" vid_source="C9DE1E3D-2766-2E54-E271-DB79C81E96CE" vid_target="38EB57A2-5E3C-84BA-AA32-9A1E4D4214D3">
@@ -2132,8 +2446,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="301" y="645"/>
-<point x="301" y="524"/>
+<point x="195" y="616"/>
+<point x="283" y="540"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="FFB11647-C5EB-A9F5-C001-D6804E04E40D" otype="Relation" vid_source="6351D025-5794-4359-FB5A-64E3C9DCBCCE" vid_target="B78B1F22-A7D1-6694-87C5-C4F4EB544294">
@@ -2141,8 +2455,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="112" y="335"/>
-<point x="112" y="180"/>
+<point x="92" y="265"/>
+<point x="92" y="206"/>
 </points>
 </Connector>
 </connectors>
