@@ -51,8 +51,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 19:57:22 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -107,8 +108,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 14:15:50 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -309,8 +311,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 19:00:15 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -365,8 +368,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 19:22:53 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -446,8 +450,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 15:26:17 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -526,14 +531,43 @@
 <domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id1" id="F8DEC804-91FB-4F69-7306-25550F686B46">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 15:57:43 UTC</createdTime>
+<generatorID>D6E95D68-0436-F705-2B02-57C48EB66253</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<referedAttribute>EC4A7963-CBB7-AF53-7234-4050BDA94097</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>09038410-2CDA-7001-14EE-AC96A40A8053</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="EE1A473B-6F06-DC99-C325-FBE1FB3C454E">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 15:57:43 UTC</createdTime>
+<generatorID>D6E95D68-0436-F705-2B02-57C48EB66253</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<referedAttribute>9244F261-393B-977B-E580-7C879B1A8CA9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AC62126F-471C-2766-E614-0E0F67FA0A48</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="99C788B3-8263-A532-1F31-CCFA23179F48" name="employee PK">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 14:51:45 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -588,8 +622,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 14:18:08 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -774,8 +809,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 14:06:09 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -832,8 +868,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 14:19:18 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -888,8 +925,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 14:14:07 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -1011,8 +1049,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 22:33:56 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -1081,8 +1120,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 14:17:44 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -1193,8 +1233,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 15:01:32 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -1251,8 +1292,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 14:20:10 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -1321,8 +1363,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-08 18:55:12 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -1467,8 +1510,9 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-18 14:28:25 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -1587,6 +1631,25 @@
 <sourceEntity>EF37F27B-6C41-59B3-167D-445684C68DE8</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>DEFE7C32-B8E0-03F4-607C-F678FB94E6B8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relationship>
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_24" directorySegmentName="seg_0" id="D6E95D68-0436-F705-2B02-57C48EB66253">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 15:57:43 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<sourcePk>325C02C7-1A4D-4F9F-EF5B-381535F011C2</sourcePk>
+<targetPk>99C788B3-8263-A532-1F31-CCFA23179F48</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9FEC42BA-08BB-B018-E9E8-B7982F2C0D91</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8C52DEB7-1BDF-A812-39E8-A2437B77B68A</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relationship>
@@ -1857,7 +1920,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="138BB1EF-9F21-5953-F89C-45217ECC5C75" otype="Entity" vid="6BE7D52A-4B72-4700-6C65-0A14501739BA">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="283" y="159" width="202" height="117"/>
+<bounds x="291" y="163" width="202" height="117"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="26A56F69-0334-20CA-D1EB-A7A27C2B60CB" otype="Entity" vid="6351D025-5794-4359-FB5A-64E3C9DCBCCE">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -2016,6 +2079,15 @@
 <point x="736" y="742"/>
 </points>
 </Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="D6E95D68-0436-F705-2B02-57C48EB66253" otype="Relation" vid_source="B78B1F22-A7D1-6694-87C5-C4F4EB544294" vid_target="9D7D801F-6845-117A-A9EA-94EED5B9191D">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="259" y="175"/>
+<point x="1101" y="175"/>
+</points>
+</Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="DA33363F-BA1E-749C-9399-B0B3AE0EB29B" otype="Relation" vid_source="19AAE457-3A17-B896-63AD-C9CC87D65E40" vid_target="CBAA53F6-60BD-B0A9-9B17-F1C956EFFD6A">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <backgroundColor>-16777216</backgroundColor>
@@ -2051,8 +2123,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="404" y="276"/>
-<point x="404" y="308"/>
+<point x="393" y="280"/>
+<point x="393" y="308"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="F868D344-D22D-5173-B9D2-95E22AD18496" otype="Relation" vid_source="C9DE1E3D-2766-2E54-E271-DB79C81E96CE" vid_target="38EB57A2-5E3C-84BA-AA32-9A1E4D4214D3">
