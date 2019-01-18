@@ -844,8 +844,8 @@
 <item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="station id" id="DF8ECB21-0A2C-769B-31B6-D3EF03C5F33B">
@@ -868,13 +868,13 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 14:19:18 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>BD7763B4-88F1-7047-ED0D-E36C5B31F751</attributeRef>
+<attributeRef>DF8ECB21-0A2C-769B-31B6-D3EF03C5F33B</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
@@ -1268,8 +1268,8 @@
 <item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="platform id" id="7F8C0A4C-B9CD-455B-529A-B7B8C8014BCF">
@@ -1282,6 +1282,20 @@
 </engineerTo>
 <referedAttribute>BD7763B4-88F1-7047-ED0D-E36C5B31F751</referedAttribute>
 <use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>323777D0-1CCA-D521-FD37-870295A0169A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="station id" id="0AF730AA-96B3-1C1D-0A3F-7F191B1C15FB">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-18 17:10:35 UTC</createdTime>
+<generatorID>C9C9C514-DB06-2CFE-33EE-06623CF7938C</generatorID>
+<ownerDesignName>railway-design</ownerDesignName>
+<engineerTo>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
+</engineerTo>
+<referedAttribute>DF8ECB21-0A2C-769B-31B6-D3EF03C5F33B</referedAttribute>
+<use>0</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <domain>A9CCC1E0-D97D-FAAC-1BD6-F5918F344870</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
@@ -1292,13 +1306,14 @@
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-11 14:20:10 UTC</createdTime>
 <ownerDesignName>railway</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="false"/>
+<item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>218468C6-25BE-2B21-AA96-E12C751BD155</attributeRef>
+<attributeRef>7F8C0A4C-B9CD-455B-529A-B7B8C8014BCF</attributeRef>
+<attributeRef>0AF730AA-96B3-1C1D-0A3F-7F191B1C15FB</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
@@ -1643,7 +1658,7 @@
 <item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
 </engineerTo>
 <sourcePk>59C2B5EF-A9E2-C864-791C-12887FCBE937</sourcePk>
-<identifying>false</identifying>
+<identifying>true</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
@@ -1793,7 +1808,7 @@
 <item key="FDD94410-9F6E-0AB3-DFB6-CADD65C64431" value="true"/>
 </engineerTo>
 <sourcePk>34CAFD0E-AAEF-BDEF-68BA-49CF6B4C3845</sourcePk>
-<identifying>false</identifying>
+<identifying>true</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
@@ -2093,7 +2108,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <alias>platform</alias>
-<dataType>INTEGER</dataType>
+<dataType>NVARCHAR2 (256)</dataType>
 <reference>false</reference>
 <referencedColumn>BD7763B4-88F1-7047-ED0D-E36C5B31F751</referencedColumn>
 <table>DEFE7C32-B8E0-03F4-607C-F678FB94E6B8</table>
@@ -2110,7 +2125,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <alias>track</alias>
-<dataType>INTEGER</dataType>
+<dataType>NVARCHAR2 (256)</dataType>
 <reference>false</reference>
 <referencedColumn>218468C6-25BE-2B21-AA96-E12C751BD155</referencedColumn>
 <table>ECE4F514-6C90-730F-28A6-804E07A77658</table>
@@ -2226,7 +2241,7 @@
 <objectViews>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntityView" oid="08EB3D29-6A29-F9BB-A806-A2E41D007E99" otype="EntityView" vid="4FD8E7FE-CC13-B57D-5783-B0D7C1E02E5E">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="937" y="274" width="322" height="177"/>
+<bounds x="887" y="207" width="263" height="278"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="0D186BA3-C4E7-08B6-AB88-E67A867C32AF" otype="Entity" vid="0D77496D-33C2-3AC2-5F47-8E55C3ECE2C2">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
