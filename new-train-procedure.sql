@@ -42,6 +42,12 @@ BEGIN
     RETURN(4)
 END
 
+IF @departure_station_id = @arrival_station_id
+BEGIN
+    RAISERROR ('Departure station id and arrival station id cannot be the same!', 16, 1)
+    RETURN(5)
+END
+
 INSERT INTO train
     VALUES (@train_id, @train_name, @carrier_id)
 
