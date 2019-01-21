@@ -5,5 +5,5 @@ CREATE TRIGGER delete_train
   FOR DELETE
   AS
   DELETE
-  FROM platform
-  WHERE station_id IN (SELECT D.id FROM deleted AS D)
+  FROM train_station
+  WHERE EXISTS ( SELECT D.* FROM deleted as D WHERE D.id = train_id AND D.name = train_name )
