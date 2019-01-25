@@ -1711,6 +1711,9 @@
 <colUsage columnID="1CFE70BE-FF12-1926-CB9A-AF55AB35AC19"/>
 <colUsage columnID="930E5D30-E6D8-2501-9178-C72365D9C05F"/>
 <colUsage columnID="9309D185-9674-7B4D-5176-D210413B8C14"/>
+<colUsage columnID="A40EC6FC-5EA6-FA9F-2BDF-F03D70FC28A9"/>
+<colUsage columnID="1BBDED77-4E2A-5F34-4984-77C330D23F9A"/>
+<colUsage columnID="B0CCDBA3-5529-BE1D-D81E-EF6F475108BC"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="1885417C-2B34-24B1-4E9A-1F3086BCE0AD" name="train_station_train_FK">
@@ -1912,34 +1915,36 @@
 <generatorID>08EB3D29-6A29-F9BB-A806-A2E41D007E99</generatorID>
 <ownerDesignName>railway-design</ownerDesignName>
 <userDefined>true</userDefined>
-<userDefinedSQL>SELECT&lt;br/&gt;    city.id,&lt;br/&gt;    city.name,&lt;br/&gt;    station.id     AS station_id,&lt;br/&gt;    station.name   AS station_name,&lt;br/&gt;    train.id       AS train_id,&lt;br/&gt;    train.name     AS train_name,&lt;br/&gt;    carrier.id     AS carrier_id,&lt;br/&gt;    carrier.name   AS carrier_name,&lt;br/&gt;    train_station.departure_time,&lt;br/&gt;    train_station.arrival_time,&lt;br/&gt;    platform.id    AS platform,&lt;br/&gt;    track.id       AS track&lt;br/&gt;FROM&lt;br/&gt;    train&lt;br/&gt;    INNER JOIN train_station ON train.id = train_station.train_id&lt;br/&gt;                                AND train.name = train_station.train_name&lt;br/&gt;    INNER JOIN station ON station.id = train_station.station_id&lt;br/&gt;    INNER JOIN city ON city.id = station.city_id&lt;br/&gt;    INNER JOIN carrier ON carrier.id = train.carrier_id&lt;br/&gt;    INNER JOIN platform ON station.id = platform.station_id&lt;br/&gt;    INNER JOIN track ON platform.id = track.platform_id</userDefinedSQL>
+<userDefinedSQL>SELECT&lt;br/&gt;    city.id                                   AS city_id,&lt;br/&gt;    city.name                                 AS city_name,&lt;br/&gt;    train_station.track_platform_station_id   AS station_id,&lt;br/&gt;    station.name                              AS station_name,&lt;br/&gt;    train_station.train_id                    AS train_id,&lt;br/&gt;    train_station.train_name                  AS train_name,&lt;br/&gt;    carrier.id                                AS carrier_id,&lt;br/&gt;    carrier.name                              AS carrier_name,&lt;br/&gt;    train_station.arrival_time,&lt;br/&gt;    train_station.departure_time,&lt;br/&gt;    train_station.day,&lt;br/&gt;    train_station.track_platform_id           AS platform_id,&lt;br/&gt;    train_station.track_id                    AS track_id&lt;br/&gt;FROM&lt;br/&gt;    train&lt;br/&gt;    INNER JOIN train_station ON train.id = train_station.train_id&lt;br/&gt;                                AND train.name = train_station.train_name&lt;br/&gt;    INNER JOIN carrier ON carrier.id = train.carrier_id&lt;br/&gt;    INNER JOIN station ON station.id = train_station.station_id&lt;br/&gt;    INNER JOIN city ON city.id = station.city_id</userDefinedSQL>
 <layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select city.id, city.name, station.id As station_id, station.name As station_name, train.id As train_id, train.name As train_name, carrier.id As carrier_id, carrier.name As carrier_name, train_station.departure_time, train_station.arrival_time, platform.id As platform, track.id As track From train Inner Join train_station On train.id = train_station.train_id And train.name = train_station.train_name Inner Join station On station.id = train_station.station_id Inner Join city On city.id = station.[city id] Inner Join carrier On carrier.id = train.[carrier id] Inner Join platform On station.id = platform.[station id] Inner Join track On platform.id = track.[platform id]&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select city.id, city.name, station.id As station_id, station.name As station_name, train.id As train_id, train.name As train_name, carrier.id As carrier_id, carrier.name As carrier_name, train_station.departure_time, train_station.arrival_time, platform.id As platform, track.id As track From train Inner Join train_station On train.id = train_station.train_id And train.name = train_station.train_name Inner Join station On station.id = train_station.station_id Inner Join city On city.id = station.[city id] Inner Join carrier On carrier.id = train.[carrier id] Inner Join platform On station.id = platform.[station id] Inner Join track On platform.id = track.[platform id]&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;train&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;102&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;train_station&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;51&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;station&quot; X=&quot;240&quot; Y=&quot;87&quot; Height=&quot;102&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;city&quot; X=&quot;50&quot; Y=&quot;141&quot; Height=&quot;85&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;carrier&quot; X=&quot;240&quot; Y=&quot;208&quot; Height=&quot;85&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;platform&quot; X=&quot;50&quot; Y=&quot;244&quot; Height=&quot;85&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;track&quot; X=&quot;240&quot; Y=&quot;311&quot; Height=&quot;102&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
 <parsed>true</parsed>
 <syntaxProvider>MSSQL</syntaxProvider>
 <usedContainers>
-<container containerID="2195F5B4-4187-9505-F088-70700B9F98C2"/>
+<container containerID="33C7CE4D-656B-2D39-8B47-B2BE06DE0B73"/>
 </usedContainers>
 <viewElements>
-<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id" id="FA2B75E3-1470-0346-246F-A6A907009D3D">
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="city_id" id="FA2B75E3-1470-0346-246F-A6A907009D3D">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-23 11:49:54 UTC</createdTime>
 <generatorID>CC83B115-91C9-93CD-4F11-B068535D44C1</generatorID>
 <ownerDesignName>railway-design</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
+<alias>city_id</alias>
 <dataType>INTEGER</dataType>
 <reference>false</reference>
 <referencedColumn>775EDE3D-0EE0-69E1-CECC-6B9EE87A9DF3</referencedColumn>
 <table>4E70C2E9-4401-E393-4EA7-4D56F2A6EABA</table>
 <viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
 </viewElement>
-<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="name" id="5F7F5BB5-137B-4166-2537-F13A7A9434DF">
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="city_name" id="5F7F5BB5-137B-4166-2537-F13A7A9434DF">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-23 11:49:54 UTC</createdTime>
 <generatorID>A42F4112-8306-E3A2-445D-A25B03432C29</generatorID>
 <ownerDesignName>railway-design</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
+<alias>city_name</alias>
 <dataType>NVARCHAR2 (256)</dataType>
 <reference>false</reference>
 <referencedColumn>F012943E-F122-25F7-F0C0-18F033B968A8</referencedColumn>
@@ -1956,7 +1961,7 @@
 <alias>station_id</alias>
 <dataType>INTEGER</dataType>
 <reference>false</reference>
-<referencedColumn>6934F2ED-0D04-247B-F44D-E7D62C932153</referencedColumn>
+<referencedColumn>264BD80B-14F9-E132-6275-F15A05D20968</referencedColumn>
 <table>EA6019E8-DB9F-AD86-9E7D-1D75C2DF5C22</table>
 <viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
 </viewElement>
@@ -1984,7 +1989,7 @@
 <alias>train_id</alias>
 <dataType>VARCHAR2 (16 CHAR)</dataType>
 <reference>false</reference>
-<referencedColumn>70F3B658-3653-12C3-C781-EC9320233CB3</referencedColumn>
+<referencedColumn>1CFE70BE-FF12-1926-CB9A-AF55AB35AC19</referencedColumn>
 <table>6050493C-8B8D-E562-22EF-C6BFF0265730</table>
 <viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
 </viewElement>
@@ -1998,7 +2003,7 @@
 <alias>train_name</alias>
 <dataType>VARCHAR2 (256 CHAR)</dataType>
 <reference>false</reference>
-<referencedColumn>937F5515-999E-5B23-76C8-0CF77B53086C</referencedColumn>
+<referencedColumn>930E5D30-E6D8-2501-9178-C72365D9C05F</referencedColumn>
 <table>6050493C-8B8D-E562-22EF-C6BFF0265730</table>
 <viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
 </viewElement>
@@ -2030,19 +2035,6 @@
 <table>33C7CE4D-656B-2D39-8B47-B2BE06DE0B73</table>
 <viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
 </viewElement>
-<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="departure_time" id="4A35EA51-0B35-3A93-DF2F-237EF6F45044">
-<createdBy>Hubert</createdBy>
-<createdTime>2019-01-23 11:49:54 UTC</createdTime>
-<generatorID>689F23C1-3A95-050E-ADB3-1D265C3BE35C</generatorID>
-<ownerDesignName>railway-design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<dataType>DATE</dataType>
-<expression>train_station.departure_time</expression>
-<reference>false</reference>
-<referencedColumn>1BBDED77-4E2A-5F34-4984-77C330D23F9A</referencedColumn>
-<viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
-</viewElement>
 <viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="arrival_time" id="03715774-0ADA-935D-9E4C-DF6D7C91F9BF">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-23 11:49:54 UTC</createdTime>
@@ -2056,33 +2048,53 @@
 <referencedColumn>A40EC6FC-5EA6-FA9F-2BDF-F03D70FC28A9</referencedColumn>
 <viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
 </viewElement>
-<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="platform" id="BB1F43E3-0679-A358-AD40-AE837129982E">
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="departure_time" id="4A35EA51-0B35-3A93-DF2F-237EF6F45044">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-23 11:49:54 UTC</createdTime>
-<generatorID>BBF2F7C2-9456-7665-A8B2-99D517C3D784</generatorID>
+<generatorID>689F23C1-3A95-050E-ADB3-1D265C3BE35C</generatorID>
 <ownerDesignName>railway-design</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
-<alias>platform</alias>
-<dataType>INTEGER</dataType>
+<dataType>DATE</dataType>
+<expression>train_station.departure_time</expression>
 <reference>false</reference>
-<referencedColumn>AB26BD07-FD4E-6D87-2503-3FFE28AC8AAF</referencedColumn>
-<table>82474B40-4191-E560-AF90-5DF927FEEE1F</table>
+<referencedColumn>1BBDED77-4E2A-5F34-4984-77C330D23F9A</referencedColumn>
 <viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
 </viewElement>
-<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="track" id="D1AF16F3-6456-5732-49F5-F4708C1E536B">
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="day" id="EBD7C7C5-574E-E6DD-10DC-D19A72D70082">
 <createdBy>Hubert</createdBy>
-<createdTime>2019-01-23 11:49:54 UTC</createdTime>
-<generatorID>D1A18D00-298A-586A-50E7-E30F02403F6B</generatorID>
+<createdTime>2019-01-25 20:36:25 UTC</createdTime>
 <ownerDesignName>railway-design</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
-<alias>track</alias>
+<dataType>VARCHAR2 (32 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>B0CCDBA3-5529-BE1D-D81E-EF6F475108BC</referencedColumn>
+<table>5A4CBB7C-A58C-4D1A-A30B-53B78A4019A1</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="platform_id" id="3D1A51FC-346F-A157-49A7-42F3027283FA">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-25 20:36:25 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>platform_id</alias>
 <dataType>INTEGER</dataType>
 <reference>false</reference>
-<referencedColumn>3D3B9F75-1028-3517-C175-114BDDE10811</referencedColumn>
-<table>2195F5B4-4187-9505-F088-70700B9F98C2</table>
-<viewID>3E4F39A4-AEA5-B864-C5CC-E81B16513D45</viewID>
+<referencedColumn>446D0E29-44ED-6453-27AB-3BEDFED4A106</referencedColumn>
+<table>5A4CBB7C-A58C-4D1A-A30B-53B78A4019A1</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="track_id" id="6F462C9E-D3C2-A371-961C-EC5E01B022AC">
+<createdBy>Hubert</createdBy>
+<createdTime>2019-01-25 20:36:25 UTC</createdTime>
+<ownerDesignName>railway-design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>track_id</alias>
+<dataType>INTEGER</dataType>
+<reference>false</reference>
+<referencedColumn>7EA1B313-51BF-293C-1544-7CABAE5A2ECE</referencedColumn>
+<table>5A4CBB7C-A58C-4D1A-A30B-53B78A4019A1</table>
 </viewElement>
 </viewElements>
 <usedObjects>
@@ -2090,29 +2102,21 @@
 <container>true</container>
 <tableName>city</tableName>
 </UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5A4CBB7C-A58C-4D1A-A30B-53B78A4019A1">
+<container>true</container>
+<tableName>train_station</tableName>
+</UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EA6019E8-DB9F-AD86-9E7D-1D75C2DF5C22">
 <container>true</container>
 <tableName>station</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6050493C-8B8D-E562-22EF-C6BFF0265730">
-<container>true</container>
-<tableName>train</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="33C7CE4D-656B-2D39-8B47-B2BE06DE0B73">
 <container>true</container>
 <tableName>carrier</tableName>
 </UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5A4CBB7C-A58C-4D1A-A30B-53B78A4019A1">
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6050493C-8B8D-E562-22EF-C6BFF0265730">
 <container>true</container>
-<tableName>train_station</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="82474B40-4191-E560-AF90-5DF927FEEE1F">
-<container>true</container>
-<tableName>platform</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2195F5B4-4187-9505-F088-70700B9F98C2">
-<container>true</container>
-<tableName>track</tableName>
+<tableName>train</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="775EDE3D-0EE0-69E1-CECC-6B9EE87A9DF3">
 <columnName>id</columnName>
@@ -2122,45 +2126,13 @@
 <columnName>name</columnName>
 <tableName>city</tableName>
 </UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6934F2ED-0D04-247B-F44D-E7D62C932153">
-<columnName>id</columnName>
-<tableName>station</tableName>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="264BD80B-14F9-E132-6275-F15A05D20968">
+<columnName>track_platform_station_id</columnName>
+<tableName>train_station</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D7C872E5-EA8D-7802-063B-BB0EEE9FEC6C">
 <columnName>name</columnName>
 <tableName>station</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="70F3B658-3653-12C3-C781-EC9320233CB3">
-<columnName>id</columnName>
-<tableName>train</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="937F5515-999E-5B23-76C8-0CF77B53086C">
-<columnName>name</columnName>
-<tableName>train</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E12DED2A-A57C-9F91-8E19-FD9841CBFAD2">
-<columnName>id</columnName>
-<tableName>carrier</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6006E3DF-579C-273C-75A7-CA64769DF8D8">
-<columnName>name</columnName>
-<tableName>carrier</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1BBDED77-4E2A-5F34-4984-77C330D23F9A">
-<columnName>departure_time</columnName>
-<tableName>train_station</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A40EC6FC-5EA6-FA9F-2BDF-F03D70FC28A9">
-<columnName>arrival_time</columnName>
-<tableName>train_station</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="AB26BD07-FD4E-6D87-2503-3FFE28AC8AAF">
-<columnName>id</columnName>
-<tableName>platform</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3D3B9F75-1028-3517-C175-114BDDE10811">
-<columnName>id</columnName>
-<tableName>track</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1CFE70BE-FF12-1926-CB9A-AF55AB35AC19">
 <columnName>train_id</columnName>
@@ -2170,6 +2142,50 @@
 <columnName>train_name</columnName>
 <tableName>train_station</tableName>
 </UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E12DED2A-A57C-9F91-8E19-FD9841CBFAD2">
+<columnName>id</columnName>
+<tableName>carrier</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6006E3DF-579C-273C-75A7-CA64769DF8D8">
+<columnName>name</columnName>
+<tableName>carrier</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A40EC6FC-5EA6-FA9F-2BDF-F03D70FC28A9">
+<columnName>arrival_time</columnName>
+<tableName>train_station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1BBDED77-4E2A-5F34-4984-77C330D23F9A">
+<columnName>departure_time</columnName>
+<tableName>train_station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B0CCDBA3-5529-BE1D-D81E-EF6F475108BC">
+<columnName>day</columnName>
+<tableName>train_station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="446D0E29-44ED-6453-27AB-3BEDFED4A106">
+<columnName>track_platform_id</columnName>
+<tableName>train_station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7EA1B313-51BF-293C-1544-7CABAE5A2ECE">
+<columnName>track_id</columnName>
+<tableName>train_station</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="70F3B658-3653-12C3-C781-EC9320233CB3">
+<columnName>id</columnName>
+<tableName>train</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="937F5515-999E-5B23-76C8-0CF77B53086C">
+<columnName>name</columnName>
+<tableName>train</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="35CD09DA-D184-6F87-E48C-457E2BC3C10A">
+<columnName>carrier_id</columnName>
+<tableName>train</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6934F2ED-0D04-247B-F44D-E7D62C932153">
+<columnName>id</columnName>
+<tableName>station</tableName>
+</UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9309D185-9674-7B4D-5176-D210413B8C14">
 <columnName>station_id</columnName>
 <tableName>train_station</tableName>
@@ -2177,18 +2193,6 @@
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EE470872-FF5A-9C2E-A1F8-F476ACC39B6F">
 <columnName>city_id</columnName>
 <tableName>station</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="35CD09DA-D184-6F87-E48C-457E2BC3C10A">
-<columnName>carrier_id</columnName>
-<tableName>train</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="78EB483F-3AEF-8689-5755-72A0B30C3CFD">
-<columnName>station_id</columnName>
-<tableName>platform</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="562F3443-5AFD-5335-F5B8-8312BBB77672">
-<columnName>platform_id</columnName>
-<tableName>track</tableName>
 </UsedObject>
 </usedObjects>
 </TableView>
