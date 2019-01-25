@@ -1,4 +1,5 @@
-IF OBJECT_ID('new_coach', 'P') IS NOT NULL DROP PROC new_coach GO
+IF OBJECT_ID('new_coach', 'P') IS NOT NULL DROP PROC new_coach
+GO
 
 CREATE PROC new_coach(@coach_id NVARCHAR(16),
                       @class INT,
@@ -13,121 +14,122 @@ CREATE PROC new_coach(@coach_id NVARCHAR(16),
                       @coach_type_id INT)
 AS
 
-IF EXISTS(SELECT C.*
-          FROM coach AS C
-          WHERE C.id = @coach_id)
-  BEGIN
-    RAISERROR ('Given coach %s already exists!', 16, 1, @coach_id)
-    RETURN (1)
-  END
+BEGIN TRY
+    IF EXISTS(SELECT c.*
+              FROM coach AS c
+              WHERE c.id = @coach_id)
+        BEGIN
+            RAISERROR ('Given coach %s already exists!', 16, 1, @coach_id)
+        END
 
 
-IF (@class < 1 OR @class > 2)
-  BEGIN
-    RAISERROR ('Given class %d is invalid!', 16, 1, @class)
-    RETURN (1)
-  END
+    IF (@class < 1 OR @class > 2)
+        BEGIN
+            RAISERROR ('Given class %d is invalid!', 16, 1, @class)
+        END
 
-IF @capacity < 0
-  BEGIN
-    RAISERROR ('Coach capacity cannot be negative!', 16, 1)
-    RETURN (1)
-  END
+    IF @capacity < 0
+        BEGIN
+            RAISERROR ('Coach capacity cannot be negative!', 16, 1)
+        END
 
-IF (@bicycle_seats < 0 OR @places_beside_table < 0 OR @places_with_wheelchair_support < 0)
-  BEGIN
-    RAISERROR ('Number of places cannot be negative!', 16, 1)
-    RETURN (1)
-  END
+    IF (@bicycle_seats < 0 OR @places_beside_table < 0 OR @places_with_wheelchair_support < 0)
+        BEGIN
+            RAISERROR ('Number of places cannot be negative!', 16, 1)
+        END
 
-IF @places_beside_table > @capacity
-  BEGIN
-    RAISERROR ('Number of places beside table cannot be greater than coachs capacity!', 16, 1)
-    RETURN (1)
-  END
+    IF @places_beside_table > @capacity
+        BEGIN
+            RAISERROR ('Number of places beside table cannot be greater than coachs capacity!', 16, 1)
+        END
 
-IF NOT EXISTS(SELECT T.*
-              FROM train AS T
-              WHERE T.id = @train_id
-                AND T.name = @train_name)
-  BEGIN
-    RAISERROR ('Given train %s %s does not exist!', 16, 1, @train_id, @train_name)
-    RETURN (1)
-  END
+    IF NOT EXISTS(SELECT t.*
+                  FROM train AS t
+                  WHERE t.id = @train_id
+                    AND t.name = @train_name)
+        BEGIN
+            RAISERROR ('Given train %s %s does not exist!', 16, 1, @train_id, @train_name)
+        END
 
-IF NOT EXISTS(SELECT CT.*
-              FROM coach_type AS CT
-              WHERE CT.id = @coach_type_id)
-  BEGIN
-    RAISERROR ('Given coach type %s does not exist!', 16, 1, @coach_type_id)
-    RETURN (1)
-  END
+    IF NOT EXISTS(SELECT ct.*
+                  FROM coach_type AS ct
+                  WHERE ct.id = @coach_type_id)
+        BEGIN
+            RAISERROR ('Given coach type %s does not exist!', 16, 1, @coach_type_id)
+        END
 
-DECLARE @number INT
+    DECLARE @number INT
 
-IF NOT EXISTS(SELECT C.*
-              FROM coach AS C
-              WHERE C.train_id = @train_id
-                AND C.train_name = @train_name)
-  BEGIN
-    IF @coach_type_id = 0 --engine
-      SET @number = 0
+    IF NOT EXISTS(SELECT c.*
+                  FROM coach AS c
+                  WHERE c.train_id = @train_id
+                    AND c.train_name = @train_name)
+        BEGIN
+            IF @coach_type_id = 0 --engine
+                SET @number = 0
+            ELSE
+                SET @number = 1
+        END
     ELSE
-      SET @number = 1
-  END
-ELSE
-  SET @number = 1 + (SELECT MAX(C.number) FROM coach AS C WHERE C.train_id = @train_id AND C.train_name = @train_name)
+        SET @number =
+                1 + (SELECT MAX(c.number) FROM coach AS c WHERE c.train_id = @train_id AND c.train_name = @train_name)
 
-INSERT INTO coach
-VALUES (@coach_id, @number, @class, @capacity, @has_ac, @has_230v_plug, @bicycle_seats,
-        @places_with_wheelchair_support, @places_beside_table, @train_id, @train_name, @coach_type_id)
+    INSERT INTO coach
+    VALUES (@coach_id, @number, @class, @capacity, @has_ac, @has_230v_plug, @bicycle_seats,
+            @places_with_wheelchair_support, @places_beside_table, @train_id, @train_name, @coach_type_id)
 
 
-DECLARE @seats INT
+    DECLARE @seats INT
 
-CREATE SEQUENCE numeration
-  START WITH 1
-  INCREMENT BY 1;
+    CREATE SEQUENCE numeration
+        START WITH 1
+        INCREMENT BY 1;
 
-DECLARE @seat_number INT
-
-
-SET @seats = @places_beside_table
-
-WHILE @seats > 0
-BEGIN
-  SET @seat_number = NEXT VALUE FOR numeration
-  IF @seat_number % 2 = 1
+    DECLARE @seat_number INT
+    SET @seats = @places_beside_table
+    WHILE @seats > 0
     BEGIN
-      INSERT INTO seat
-      VALUES (@seat_number, 'W', @coach_id, 1)
+        SET @seat_number = NEXT VALUE FOR numeration
+        IF @seat_number % 2 = 1
+            BEGIN
+                INSERT INTO seat
+                VALUES (@seat_number, 'W', @coach_id, 1)
+            END
+        ELSE
+            BEGIN
+                INSERT INTO seat
+                VALUES (@seat_number, 'O', @coach_id, 1)
+            END
+        SET @seats = @seats - 1
     END
-  ELSE
+    SET @seats = @capacity - @places_beside_table
+    WHILE @seats > 0
     BEGIN
-      INSERT INTO seat
-      VALUES (@seat_number, 'O', @coach_id, 1)
+        SET @seat_number = NEXT VALUE FOR numeration
+        IF @seat_number % 2 = 1
+            BEGIN
+                INSERT INTO seat
+                VALUES (@seat_number, 'W', @coach_id, 0)
+            END
+        ELSE
+            BEGIN
+                INSERT INTO seat
+                VALUES (@seat_number, 'O', @coach_id, 0)
+            END
+        SET @seats = @seats - 1
     END
-  SET @seats = @seats - 1
-END
+END TRY
+BEGIN CATCH
+    DECLARE @error_msg NVARCHAR(256)
+    DECLARE @error_severity NVARCHAR(256)
+    DECLARE @error_state NVARCHAR(256)
+
+    SET @error_msg = ERROR_MESSAGE()
+    SET @error_severity = ERROR_SEVERITY()
+    SET @error_state = ERROR_STATE()
+
+    RAISERROR (@error_msg, @error_severity, @error_state)
+END CATCH
 
 
-SET @seats = @capacity - @places_beside_table
-
-WHILE @seats > 0
-BEGIN
-  SET @seat_number = NEXT VALUE FOR numeration
-  IF @seat_number % 2 = 1
-    BEGIN
-      INSERT INTO seat
-      VALUES (@seat_number, 'W', @coach_id, 0)
-    END
-  ELSE
-    BEGIN
-      INSERT INTO seat
-      VALUES (@seat_number, 'O', @coach_id, 0)
-    END
-  SET @seats = @seats - 1
-END
-
-RETURN (0)
 GO

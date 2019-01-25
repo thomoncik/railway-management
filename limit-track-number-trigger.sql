@@ -1,18 +1,23 @@
-CREATE OR ALTER TRIGGER limit_track_number_for_platform ON track
-INSTEAD OF INSERT AS BEGIN
+IF OBJECT_ID('limit_track_number_for_platform') IS NOT NULL DROP TRIGGER limit_track_number_for_platform
 
-  DECLARE @platform_id INT
-  SELECT @platform_id=platform_id FROM inserted;
+CREATE OR ALTER TRIGGER limit_track_number_for_platform
+    ON track
+    INSTEAD OF INSERT AS
+BEGIN
 
-  DECLARE @tracks INT
-  SELECT @tracks=COUNT(*) FROM track WHERE platform_id = @platform_id;
+    DECLARE @platform_id INT
+    SELECT @platform_id = platform_id FROM inserted;
 
-  print @tracks
-  print @platform_id
+    DECLARE @tracks INT
+    SELECT @tracks = COUNT(*) FROM track WHERE platform_id = @platform_id;
 
-  IF (@tracks >= 2)
-    THROW 50000, 'Platform cannot contain more than two tracks.', 1;
-  
-  INSERT INTO track SELECT * from inserted;
+    PRINT @tracks
+    PRINT @platform_id
+
+    PRINT @tracks
+
+    IF (@tracks >= 2)
+        THROW 50000, 'Platform cannot contain more than two tracks.', 1;
+
+    INSERT INTO track SELECT * FROM inserted;
 END
-

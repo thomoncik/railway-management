@@ -5,25 +5,25 @@ GO
 
 
 CREATE TRIGGER delete_train
-  ON train
-  FOR DELETE
-  AS
+    ON train
+    FOR DELETE
+    AS
 BEGIN
-  DELETE
-  FROM train_station
-  WHERE EXISTS(SELECT D.* FROM deleted as D WHERE D.id = train_id AND D.name = train_name);
+    DELETE
+    FROM train_station
+    WHERE EXISTS(SELECT d.* FROM deleted AS d WHERE d.id = train_id AND d.name = train_name);
 
-  DELETE
-  FROM coach
-  WHERE EXISTS(SELECT D.* FROM deleted as D WHERE D.id = train_id AND D.name = train_name)
+    DELETE
+    FROM coach
+    WHERE EXISTS(SELECT d.* FROM deleted AS d WHERE d.id = train_id AND d.name = train_name)
 END
 
 GO
 
 CREATE TRIGGER delete_coach
-  ON coach
-  FOR DELETE
-  AS
-  DELETE
-  FROM seat
-  WHERE coach_id IN ( SELECT id FROM deleted )
+    ON coach
+    FOR DELETE
+    AS
+    DELETE
+    FROM seat
+    WHERE coach_id IN (SELECT id FROM deleted)
