@@ -10,7 +10,7 @@ INSTEAD OF INSERT AS BEGIN
   print @tracks
   print @platform_id
 
-  IF (@tracks <= 2)
+  IF (@tracks >= 2)
     THROW 50000, 'Platform cannot contain more than two tracks.', 1;
   
   INSERT INTO track SELECT * from inserted;
