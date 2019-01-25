@@ -5,6 +5,7 @@ CREATE PROC new_train(@train_id NVARCHAR(16), @train_name NVARCHAR(256), @carrie
 AS
 
 DECLARE @carrier_id INT
+SET @carrier_name = UPPER(@carrier_name)
 
 IF NOT EXISTS(SELECT c.name
               FROM carrier AS c
