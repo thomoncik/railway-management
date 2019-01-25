@@ -522,6 +522,7 @@
 <engineerTo>
 <item key="3667456C-24C3-8F7F-9296-3291E929F915" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>EC4A7963-CBB7-AF53-7234-4050BDA94097</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -536,6 +537,7 @@
 <engineerTo>
 <item key="3667456C-24C3-8F7F-9296-3291E929F915" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>9244F261-393B-977B-E580-7C879B1A8CA9</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -1611,10 +1613,11 @@
 <engineerTo>
 <item key="3667456C-24C3-8F7F-9296-3291E929F915" value="true"/>
 </engineerTo>
+<sourceTransferable>false</sourceTransferable>
 <sourcePk>325C02C7-1A4D-4F9F-EF5B-381535F011C2</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
-<optionalTarget>false</optionalTarget>
+<optionalTarget>true</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>9FEC42BA-08BB-B018-E9E8-B7982F2C0D91</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
@@ -1929,11 +1932,9 @@
 <item key="3667456C-24C3-8F7F-9296-3291E929F915" value="true"/>
 </engineerTo>
 <userDefined>true</userDefined>
-<userDefinedSQL>SELECT&lt;br/&gt;    city.id,&lt;br/&gt;    city.name,&lt;br/&gt;    station.id     AS station_id,&lt;br/&gt;    station.name   AS station_name,&lt;br/&gt;    train.id       AS train_id,&lt;br/&gt;    train.name     AS train_name,&lt;br/&gt;    carrier.id     AS carrier_id,&lt;br/&gt;    carrier.name   AS carrier_name,&lt;br/&gt;    train_station.departure_time,&lt;br/&gt;    train_station.arrival_time,&lt;br/&gt;    platform.id    AS platform,&lt;br/&gt;    track.id       AS track&lt;br/&gt;FROM&lt;br/&gt;    train&lt;br/&gt;    INNER JOIN train_station ON train.id = train_station.train_id&lt;br/&gt;                                AND train.name = train_station.train_name&lt;br/&gt;    INNER JOIN station ON station.id = train_station.station_id&lt;br/&gt;    INNER JOIN city ON city.id = station.city_id&lt;br/&gt;    INNER JOIN carrier ON carrier.id = train.carrier_id&lt;br/&gt;    INNER JOIN platform ON station.id = platform.station_id&lt;br/&gt;    INNER JOIN track ON platform.id = track.platform_id</userDefinedSQL>
-<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select city.id, city.name, station.id As station_id, station.name As station_name, train.id As train_id, train.name As train_name, carrier.id As carrier_id, carrier.name As carrier_name, train_station.departure_time, train_station.arrival_time, platform.id As platform, track.id As track From train Inner Join train_station On train.id = train_station.train_id And train.name = train_station.train_name Inner Join station On station.id = train_station.station_id Inner Join city On city.id = station.[city id] Inner Join carrier On carrier.id = train.[carrier id] Inner Join platform On station.id = platform.[station id] Inner Join track On platform.id = track.[platform id]&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select city.id, city.name, station.id As station_id, station.name As station_name, train.id As train_id, train.name As train_name, carrier.id As carrier_id, carrier.name As carrier_name, train_station.departure_time, train_station.arrival_time, platform.id As platform, track.id As track From train Inner Join train_station On train.id = train_station.train_id And train.name = train_station.train_name Inner Join station On station.id = train_station.station_id Inner Join city On city.id = station.[city id] Inner Join carrier On carrier.id = train.[carrier id] Inner Join platform On station.id = platform.[station id] Inner Join track On platform.id = track.[platform id]&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;train&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;train_station&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;47&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;station&quot; X=&quot;240&quot; Y=&quot;87&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;city&quot; X=&quot;50&quot; Y=&quot;141&quot; Height=&quot;83&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;carrier&quot; X=&quot;240&quot; Y=&quot;208&quot; Height=&quot;83&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;platform&quot; X=&quot;50&quot; Y=&quot;244&quot; Height=&quot;83&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;track&quot; X=&quot;240&quot; Y=&quot;311&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
-<validSQL>false</validSQL>
+<userDefinedSQL>SELECT&lt;br/&gt;    city.id,&lt;br/&gt;    city.name,&lt;br/&gt;    station.id     AS station_id,&lt;br/&gt;    station.name   AS station_name,&lt;br/&gt;    train.id       AS train_id,&lt;br/&gt;    train.name     AS train_name,&lt;br/&gt;    carrier.id     AS carrier_id,&lt;br/&gt;    carrier.name   AS carrier_name,&lt;br/&gt;    train_station.departure_time,&lt;br/&gt;    train_station.arrival_time,&lt;br/&gt;    platform.id    AS platform,&lt;br/&gt;    track.id       AS track&lt;br/&gt;FROM&lt;br/&gt;    train&lt;br/&gt;    INNER JOIN train_station ON train.id = train_station.train_id&lt;br/&gt;                                AND train.name = train_station.train_name&lt;br/&gt;    INNER JOIN station ON station.id = train_station.station_id&lt;br/&gt;    INNER JOIN city ON city.id = station&lt;br/&gt;.[city id]&lt;br&gt;  INNER JOIN carrier ON carrier.id = train.[carrier id]&lt;br&gt;  INNER JOIN platform ON station.id = platform.[station id]&lt;br&gt;  INNER JOIN track ON platform.id = track.[platform id]</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select city.id, city.name, station.id As station_id, station.name As station_name, train.id As train_id, train.name As train_name, carrier.id As carrier_id, carrier.name As carrier_name, train_station.departure_time, train_station.arrival_time, platform.id As platform, track.id As track From train Inner Join train_station On train.id = train_station.train_id And train.name = train_station.train_name Inner Join station On station.id = train_station.station_id Inner Join city On city.id = station.[city id] Inner Join carrier On carrier.id = train.[carrier id] Inner Join platform On station.id = platform.[station id] Inner Join track On platform.id = track.[platform id]&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select city.id, city.name, station.id As station_id, station.name As station_name, train.id As train_id, train.name As train_name, carrier.id As carrier_id, carrier.name As carrier_name, train_station.departure_time, train_station.arrival_time, platform.id As platform, track.id As track From train Inner Join train_station On train.id = train_station.train_id And train.name = train_station.train_name Inner Join station On station.id = train_station.station_id Inner Join city On city.id = station.[city id] Inner Join carrier On carrier.id = train.[carrier id] Inner Join platform On station.id = platform.[station id] Inner Join track On platform.id = track.[platform id]&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;train&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;102&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;train_station&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;51&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;station&quot; X=&quot;240&quot; Y=&quot;87&quot; Height=&quot;102&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;city&quot; X=&quot;50&quot; Y=&quot;141&quot; Height=&quot;85&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;carrier&quot; X=&quot;240&quot; Y=&quot;208&quot; Height=&quot;85&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;platform&quot; X=&quot;50&quot; Y=&quot;244&quot; Height=&quot;85&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;track&quot; X=&quot;240&quot; Y=&quot;311&quot; Height=&quot;102&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
 <parsed>true</parsed>
-<incorrectSQL>true</incorrectSQL>
 <syntaxProvider>MSSQL</syntaxProvider>
 <viewType>EntityView</viewType>
 <usedContainers>
@@ -2203,14 +2204,6 @@
 <columnName>name</columnName>
 <tableName>carrier</tableName>
 </UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FB7E5321-06B3-17A9-75C6-7D74844E4424">
-<columnName>departure_time</columnName>
-<tableName>train_station</tableName>
-</UsedObject>
-<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="781A5AFE-881B-1633-2415-F8B63383781F">
-<columnName>arrival_time</columnName>
-<tableName>train_station</tableName>
-</UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BD7763B4-88F1-7047-ED0D-E36C5B31F751">
 <columnName>id</columnName>
 <tableName>platform</tableName>
@@ -2220,19 +2213,19 @@
 <tableName>track</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DA3384C1-3EA7-A1BF-3F8C-79F1E0690F1B">
-<columnName>city_id</columnName>
+<columnName>city id</columnName>
 <tableName>station</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EB79CBA6-654C-CD45-742A-B60C69D55DE8">
-<columnName>carrier_id</columnName>
+<columnName>carrier id</columnName>
 <tableName>train</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DF8ECB21-0A2C-769B-31B6-D3EF03C5F33B">
-<columnName>station_id</columnName>
+<columnName>station id</columnName>
 <tableName>platform</tableName>
 </UsedObject>
 <UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7F8C0A4C-B9CD-455B-529A-B7B8C8014BCF">
-<columnName>platform_id</columnName>
+<columnName>platform id</columnName>
 <tableName>track</tableName>
 </UsedObject>
 </usedObjects>
