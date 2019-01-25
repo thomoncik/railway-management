@@ -1,4 +1,5 @@
 IF OBJECT_ID('is_valid_pesel') IS NOT NULL DROP FUNCTION is_valid_pesel
+GO
 
 CREATE OR ALTER FUNCTION is_valid_pesel(@pesel NVARCHAR(11)) RETURNS BIT
 AS

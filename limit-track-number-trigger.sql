@@ -1,4 +1,5 @@
 IF OBJECT_ID('limit_track_number_for_platform') IS NOT NULL DROP TRIGGER limit_track_number_for_platform
+GO
 
 CREATE OR ALTER TRIGGER limit_track_number_for_platform
     ON track
