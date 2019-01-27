@@ -2,7 +2,7 @@
 <relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="3667456C-24C3-8F7F-9296-3291E929F915" mainViewID="FB3326EF-997F-AA46-351D-AFBB21B5485C">
 <createdBy>Hubert</createdBy>
 <createdTime>2019-01-23 11:49:41 UTC</createdTime>
-<ownerDesignName>railway-design</ownerDesignName>
+<ownerDesignName>railway</ownerDesignName>
 <shouldBeOpen>false</shouldBeOpen>
 <selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
 </relationalModel>
