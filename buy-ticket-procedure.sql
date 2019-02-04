@@ -56,7 +56,7 @@ BEGIN TRY
             BEGIN
                 SET @selected = 1
 
-                INSERT INTO ticket (id, departure, seat_id, station_id, station_id1, discount_id, seat_coach_id
+                INSERT INTO ticket (id, departure, seat_id, station_id, station_id2, discount_id, seat_coach_id
                 )
                 VALUES (@id, @departure_time, @seat_train_id, @departure_station_id, @arrival_station_id, @discount_id,
                         @seat_coach_id);
