@@ -16,11 +16,19 @@ CREATE FUNCTION users_tickets(@user_id INT)
                    )
 AS
 BEGIN
-    INSERT INTO @Tickets
-    SELECT U.id, P.first_name, P.last_name, T.id, T.departure, T.seat_id, T.station_id, T.station_id2, T.seat_coach_id
-    FROM [dbo].[user] U
-    JOIN person P ON U.person_id = P.id
-    JOIN user_ticket UT ON U.id = UT.user_id
-    JOIN ticket T ON UT.ticket_id = T.id
-    RETURN
+  INSERT INTO @Tickets
+  SELECT U.id,
+         P.first_name,
+         P.last_name,
+         T.id,
+         T.departure,
+         T.seat_id,
+         T.station_id,
+         T.station_id2,
+         T.seat_coach_id
+  FROM [dbo].[user] U
+         JOIN person P ON U.person_id = P.id
+         JOIN user_ticket UT ON U.id = UT.user_id
+         JOIN ticket T ON UT.ticket_id = T.id
+  RETURN
 END

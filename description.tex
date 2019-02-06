@@ -1,0 +1,255 @@
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[MeX]{polski}
+\usepackage{rotating}
+\usepackage{geometry}
+
+\renewcommand{\figurename}{Załącznik}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Uniwerystet Jagielloński}\\[1.5cm] % Name of your university/college
+\textsc{\Large Projekt zaliczeniowy}\\[0.5cm] % Major heading such as course name
+\textsc{\large z kursu Bazy Danych}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries System zarządzenia koleją}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+% \begin{minipage}{0.4\textwidth}
+% \begin{flushleft} \large
+% \emph{Autorzy:}\\
+% Małgorzata \textsc{Dymek}\\
+% Hubert \textsc{Jaremko}\\
+% Tomasz \textsc{Homoncik}\\
+% \end{flushleft}
+% \end{minipage}
+% ~
+% \begin{minipage}{0.4\textwidth}
+% \begin{flushright} \large
+% \emph{Supervisor:} \\
+% Dr. James \textsc{Smith} % Supervisor's Name
+% \end{flushright}
+% \end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+\Large% \emph{Autorzy:}\\
+Małgorzata \textsc{Dymek}\\
+Hubert \textsc{Jaremko}\\
+Tomasz \textsc{Homoncik}\\[2.0cm]
+
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[scale=0.27]{uj.jpg}\\[0.5cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large Semestr zimowy 2018/2019}\\ % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+\section{Podstawowe założenia projektu}
+
+\subsection{Cel}
+Baza danych została stworzona w celu zarządzania koleją, w rozumieniu zarówno infrastruktury (stacje kolejowe, tory), taboru (pociągi, wagony, miejsca), personelu (zarządzanie zasobami ludzkimi, rodzaje uprawnień) i obsługi użytkownika (konta klientów, możliwe kupowanie biletów).
+
+\subsection{Możliwości}
+\textbf{Możliwości użytkownika:}
+\begin{itemize}
+    \item Zakup biletu, znalezienie w miarę możliwości preferowanego typu miejsca.
+    \item Sprawdzenie rozkładu dla danego pociągu.
+    \item Sprawdzenie rozkładu dla danej stacji.
+\end{itemize}
+\hfill \\
+\textbf{Możliwości administratora:}
+\begin{itemize}
+    \item Dodawanie pociągu, wagonu.
+    \item Dodawanie stacji, peronu, toru.
+    \item Przypisanie wagonu do pociągu.
+    \item Tworzenie trasy pociągu.
+    \item Dodawanie pracowników, nadawanie im uprawnień, przypisywanie do pociągu.
+    \item Dodawanie nowych zniżek.
+\end{itemize}
+
+\subsection{Przyjęte ograniczenia}
+\begin{itemize}
+    \item Jeden bilet obejmuje jedno miejsce siedzące.
+    \item Wprowadzane połączenia są możliwe do realizacji.
+    \item Uznajemy, że perony i tory są numerowane liczbami naturalnymi.
+    \item Siedzenia są ustawione w rzędach po dwa, nieparzyste od korytarza, parzyste od okna.
+\end{itemize}
+
+\section{Diagram ER}
+Załącznik 1.
+
+\section{Schemat bazy danych (diagram relacji)}
+Załącznik 2.
+
+\section{Dodatkowe więzy integralności danych (nie zapisane w schemacie)}
+\begin{itemize}
+    \item \textbf{Id pociągu} - wyznaczane przez stacje końcową i początkową, musi być zgodne z istniejącymi stacjami.
+\end{itemize}
+
+\section{Opis stworzonych widoków i funkcji}
+\begin{enumerate}
+    \item \textbf{Timetable (VIEW)}\\
+    Tworzy widok rozkładu jazdy, zawierające dane dotyczące miasta, stacji, pociągu, przewoźnika, godziny przyjadu i odjazdu, daty, oraz numeru peronu i toru, z którego pociągu odjeżdża.\\
+    
+    \item \textbf{Least crowded coach (FUNC)}\\
+    Funkcja wyznaczająca najmniej zapełniony wagon w pociągu, używana by sprzedaż biletów odbywała się w miarę możliwości równomiernie wewnątrz pociągu.\\
+    
+    \item \textbf{Users tickets' (FUNC)}\\
+    Funkcja zwracająca tabelę zawierającą wszystkie bilety kupione przez danego użytkownika.\\
+    
+    \item \textbf{Get train departure station (FUNC)}\\
+    Funkcja wyznaczająca id stacji końcowej na podstawie id pociągu.\\
+    
+    \item \textbf{Get train arrival station (FUNC)}\\
+    Funkcja wyznaczająca id stacji początkowej na podstawie id pociągu.\\
+    
+    \item \textbf{Coach fill level (FUNC)}\\
+    Funkcja obliczająca poziom zapełnienia wagonu na podstawie ilości wykupionych biletów na miejsca w nim.\\
+    
+    \item \textbf{Trains without employee (FUNC)}\\
+    Funkcja zwracająca tabelę pociągów, do których nie został przypisany żaden pracownik.\\
+    
+    \item \textbf{Is valid PESEL (FUNC)}\\
+    Funkcja sprawdzająca, czy podany numer PESEL jest poprawny.\\
+    
+    \item \textbf{Train timetable (FUNC)}\\
+    Funkcja zwracająca rozkład żądanego pociągu.\\
+    
+    \item \textbf{Station timetable (FUNC)}\\
+    Funkcja zwracająca rozkład dla danej stacji.
+\end{enumerate}
+
+\section{Opis procedur składowanych}
+\begin{enumerate}
+    \item \textbf{New connection (PROC)}\\
+    Procedura tworzenia nowego połączenia (między stacjami). Sprawdzane są warunki poprawności danych, wybierany jest wolny tor na który pociąg może wjechać.\\
+    
+    
+    \item \textbf{Buy ticket (PROC)}\\
+    Procedura umożliwiająca zakup biletu. Sprawdzana jest poprawność danych, wyszukiwane jest odpowiednie miejsce jeśli to możliwe.
+    
+    \item \textbf{New train (PROC)}\\
+    Procedura dodająca nowy pociąg z zachowaniem poprawności danych, w tym poprawności id (względem stacji).\\
+    
+    \item \textbf{New coach (PROC)}\\
+    Procedura dodająca nowy wagon. Automatycznie dodawane są również siedzenia tego wagonu, w ilości i ustawieniu danym argumentami.
+        
+    \item \textbf{Backup (PROC)}\\
+    Procedura tworząca kopię zapasową.\\
+    
+    \item \textbf{New person (PROC)}\\
+    Procedura tworząca nową osobę w bazie. Sprawdzenie poprawności wszystkich danych, w tym numeru PESEL.\\
+    
+    \item \textbf{New user (PROC)}\\
+    Procedura dodająca nowego użytkownika.\\ 
+    
+    \item \textbf{Reset password (PROC)}\\
+    Procedura umożliwiająca zmianę hasła użytkownika.\\
+    
+\end{enumerate}
+
+\section{Opis wyzwalaczy}
+\begin{enumerate}
+    \item \textbf{Insert carrier (TRIG)}\\
+    Wyzwalacz dbający o spójność wstawianych danych dotyczących przewoźników.\\
+    
+    \item \textbf{Insert track (TRIG)}\\
+    Wyzwalacz kontrolujący możliwość dodania toru, dbający o poprawność danych i ograniczenie dwóch torów na peron.\\
+    
+    \item \textbf{Insert discount (TRIG)}
+    Wyzwalacz kontrolujący poprawność wartości dodawanej zniżki.\\
+    
+    \item \textbf{Delete platform (TRIG)}\\
+    Wyzwalacz usuwający wszystkie tory peronu, który został usunięty. Kaskadowe usuwanie nie jest możliwe, ponieważ usunięcie peronu nie powinno usuwać połączenia, podczas którego pociąg się zatrzymuje na tym peronie (pociąg powinien zmienić peron, nie usuwać połączenie).\\
+    
+    \item \textbf{Delete train coach (TRIG)}\\
+    Wyzwalacz usuwający wszystkie siedzenia powiązane z usuwanym przedziałem.
+\end{enumerate}
+
+\section{Skrypt tworzący bazę danych}
+Wygenerowany automatycznie przez Oracle SQL Data Modeler.
+
+\newgeometry{tmargin=2cm, bmargin=2.3cm, lmargin=1.5cm, rmargin=1.5cm}
+
+\begin{sidewaysfigure}
+    \includegraphics[scale=0.35]{logical.png}
+    \caption{Diagram ER.}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+    \includegraphics[scale=0.215]{relational.png}
+    \caption{Schemat bazy danych.}
+\end{sidewaysfigure}
+
+
+\end{document}
