@@ -43,6 +43,10 @@ BEGIN TRY
             RAISERROR ('Number of places beside table cannot be greater than coachs capacity!', 16, 1)
         END
 
+    IF @places_beside_table % 4 <> 0
+      BEGIN
+        RAISERROR ('Number of places beside table should be even!', 16, 1)
+      END
     IF NOT EXISTS(SELECT t.*
                   FROM train AS t
                   WHERE t.id = @train_id
@@ -93,12 +97,12 @@ BEGIN TRY
         IF @seat_number % 2 = 1
             BEGIN
                 INSERT INTO seat
-                VALUES (@seat_number, 'W', @coach_id, 1)
+                VALUES (@seat_number, 'C', @coach_id, 1)
             END
         ELSE
             BEGIN
                 INSERT INTO seat
-                VALUES (@seat_number, 'O', @coach_id, 1)
+                VALUES (@seat_number, 'W', @coach_id, 1)
             END
         SET @seats = @seats - 1
     END
@@ -109,12 +113,12 @@ BEGIN TRY
         IF @seat_number % 2 = 1
             BEGIN
                 INSERT INTO seat
-                VALUES (@seat_number, 'W', @coach_id, 0)
+                VALUES (@seat_number, 'C', @coach_id, 0)
             END
         ELSE
             BEGIN
                 INSERT INTO seat
-                VALUES (@seat_number, 'O', @coach_id, 0)
+                VALUES (@seat_number, 'W', @coach_id, 0)
             END
         SET @seats = @seats - 1
     END
